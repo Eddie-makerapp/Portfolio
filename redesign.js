@@ -336,14 +336,27 @@ if (window.gsap){
   var titleEl = card.querySelector('.cc-title'), descEl = card.querySelector('.cc-desc');
   var tx = 0, ty = 0, cx = 0, cy = 0, active = false, primed = false, raf = null;
   function loop(){ cx += (tx - cx) * 0.18; cy += (ty - cy) * 0.18; card.style.transform = 'translate3d(' + cx + 'px,' + cy + 'px,0)'; if (active) raf = requestAnimationFrame(loop); else raf = null; }
-  function place(x, y){ tx = Math.min(x + 18, innerWidth - 278); ty = Math.min(y + 18, innerHeight - (card.offsetHeight || 200) - 10); if (!primed){ cx = tx; cy = ty; primed = true; } }
+  function place(x, y){ var w = card.offsetWidth || 300; tx = Math.max(8, Math.min(x + 18, innerWidth - w - 8)); ty = Math.min(y + 18, innerHeight - (card.offsetHeight || 200) - 10); if (!primed){ cx = tx; cy = ty; primed = true; } }
   function show(el){ titleEl.textContent = el.dataset.title || el.textContent.trim(); descEl.textContent = el.dataset.desc || ''; card.classList.add('show'); active = true; if (!raf) loop(); }
   function hide(){ card.classList.remove('show'); active = false; }
+  var touch = window.matchMedia('(hover: none)').matches;
+  var current = null;
   terms.forEach(function(t){
-    t.addEventListener('mouseenter', function(e){ place(e.clientX, e.clientY); show(t); });
-    t.addEventListener('mousemove', function(e){ place(e.clientX, e.clientY); });
-    t.addEventListener('mouseleave', hide);
+    if (touch) {
+      /* tap to toggle on touch devices (no hover) */
+      t.addEventListener('click', function(e){
+        e.preventDefault(); e.stopPropagation();
+        var r = t.getBoundingClientRect();
+        if (current === t) { hide(); current = null; return; }
+        primed = false; place(r.left, r.bottom); show(t); current = t;
+      });
+    } else {
+      t.addEventListener('mouseenter', function(e){ place(e.clientX, e.clientY); show(t); });
+      t.addEventListener('mousemove', function(e){ place(e.clientX, e.clientY); });
+      t.addEventListener('mouseleave', hide);
+    }
   });
+  if (touch) document.addEventListener('click', function(){ hide(); current = null; });
 })();
 
 /* ---------- Wave grid background (News page) — vanilla three port ----------
