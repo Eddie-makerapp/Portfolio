@@ -354,7 +354,8 @@ if (window.gsap){
 (function () {
   var mount = document.getElementById('wave-grid');
   if (!mount || typeof THREE === 'undefined') return;
-  var MAX_TRAIL = 128, GRID = 36, colorBase = '#36454F', colorHigh = '#A81E22';
+  var isMobile = innerWidth < 768;
+  var MAX_TRAIL = 128, GRID = isMobile ? 24 : 36, colorBase = '#36454F', colorHigh = '#A81E22';
 
   function overrideVertex(vs) {
     return vs.replace('#include <common>', '#include <common>\n' +
@@ -372,7 +373,7 @@ if (window.gsap){
   }
 
   var cubeW = 0.8, cubeH = 3, gap = 0.01, bounds = GRID * (cubeW + gap);
-  function size() { return { w: innerWidth || 1, h: innerHeight || 1, pr: Math.min(devicePixelRatio, 2) }; }
+  function size() { return { w: innerWidth || 1, h: innerHeight || 1, pr: Math.min(devicePixelRatio, isMobile ? 1.25 : 2) }; }
   var sz = size();
   var scene = new THREE.Scene();
   scene.background = new THREE.Color(colorBase).multiplyScalar(0.72);
@@ -457,7 +458,9 @@ if (window.gsap){
   renderer.setSize(sz.w, sz.h); renderer.setPixelRatio(sz.pr);
   addEventListener('resize', function () { sz = size(); camera.aspect = sz.w / sz.h; camera.updateProjectionMatrix(); renderer.setSize(sz.w, sz.h); renderer.setPixelRatio(sz.pr); rect = mount.getBoundingClientRect(); });
 
-  if (RM || innerWidth < 768) { renderer.render(scene, camera); return; }
+  for (var _s = 0; _s < 4; _s++) addRandom();   /* seed ripples so the grid shows colour immediately (no dead-grey first paint) */
+  updateTrail(0.001);
+  if (RM) { renderer.render(scene, camera); return; }   /* mobile now animates (lighter grid + capped DPR); only reduced-motion stays static */
   var clock = new THREE.Clock();
   renderer.setAnimationLoop(function () {
     var dt = clock.getDelta();
