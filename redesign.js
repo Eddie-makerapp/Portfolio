@@ -346,9 +346,12 @@ if (window.gsap){
       /* tap to toggle on touch devices (no hover) */
       t.addEventListener('click', function(e){
         e.preventDefault(); e.stopPropagation();
-        var r = t.getBoundingClientRect();
         if (current === t) { hide(); current = null; return; }
-        primed = false; place(r.left, r.bottom); show(t); current = t;
+        show(t); current = t;
+        /* pin to the top of the screen (under the header) so it's fully visible */
+        var w = card.offsetWidth || Math.min(300, innerWidth * 0.88);
+        tx = Math.max(8, (innerWidth - w) / 2); ty = 76;
+        cx = tx; cy = ty; primed = true;
       });
     } else {
       t.addEventListener('mouseenter', function(e){ place(e.clientX, e.clientY); show(t); });
