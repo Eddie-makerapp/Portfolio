@@ -78,7 +78,7 @@ html[data-v-herocta="round"] .hero .cta .btn + .btn .arrow{font-size:28px}
 html[data-v-herocta="round"] .hero .cta .btn + .btn .ring-text{display:block}
 html[data-v-herocta="links"] .hero .cta{gap:42px;align-items:baseline}
 html[data-v-herocta="links"] .hero .cta .btn{border:0;padding:6px 0;background:none;color:var(--paper);
-  font:italic 600 26px/1.2 var(--f-display,"Bodoni Moda",serif);text-transform:none;letter-spacing:0;
+  font:italic 600 26px/1.2 var(--f-display,var(--font-brand));text-transform:none;letter-spacing:0;
   background-image:linear-gradient(var(--gold),var(--gold));background-repeat:no-repeat;background-size:100% 1px;background-position:0 100%;
   transition:background-size .5s var(--ease),color .3s}
 html[data-v-herocta="links"] .hero .cta .btn .fill{display:none}
@@ -131,12 +131,12 @@ html[data-v-homenews="list"] .post:hover::after,html[data-v-archive="list"] #new
   html[data-v-homenews="lead"] .posts{grid-template-columns:1.35fr 1fr}
   html[data-v-homenews="lead"] .post:first-child{grid-row:span 2;display:flex;flex-direction:column;justify-content:flex-end;min-height:420px;padding:50px 44px;
     background:linear-gradient(165deg,var(--maroon) 0%,var(--maroon-deep) 60%,var(--char-deep))}
-  html[data-v-homenews="lead"] .post:first-child h3{font:italic 600 clamp(30px,3vw,42px)/1.12 var(--f-display,"Bodoni Moda",serif)}
+  html[data-v-homenews="lead"] .post:first-child h3{font:italic 600 clamp(30px,3vw,42px)/1.12 var(--f-display,var(--font-brand))}
 }
 html[data-v-homenews="strip"] .posts{background:none;gap:0;counter-reset:np}
 html[data-v-homenews="strip"] .post{background:transparent;border-left:1px solid rgba(201,162,39,.3);padding:6px 34px 10px}
 html[data-v-homenews="strip"] .post::before{counter-increment:np;content:"0" counter(np);display:block;margin-bottom:18px;
-  font:italic 700 64px/1 var(--f-display,"Bodoni Moda",serif);color:transparent;-webkit-text-stroke:1px var(--gold);transition:color .4s}
+  font:italic 700 64px/1 var(--f-display,var(--font-brand));color:transparent;-webkit-text-stroke:1px var(--gold);transition:color .4s}
 html[data-v-homenews="strip"] .post p{display:none}
 html[data-v-homenews="strip"] .post:hover{background:transparent}
 html[data-v-homenews="strip"] .post:hover::before{color:var(--gold)}
@@ -146,7 +146,7 @@ html[data-v-homenews="strip"] .post:hover::before{color:var(--gold)}
 html[data-v-stats] .stats{display:block}
 .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center}
 .stat .sv{position:relative;display:flex;justify-content:center;align-items:center;min-height:1em;
-  font:italic 700 clamp(46px,5.2vw,76px)/1 var(--f-display,"Bodoni Moda",serif);color:var(--paper)}
+  font:italic 700 clamp(46px,5.2vw,76px)/1 var(--f-display,var(--font-brand));color:var(--paper)}
 .stat .sl{max-width:22ch;margin:14px auto 0;font:600 12px/1.5 "Barlow Condensed",sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
 .odo-wrap{display:inline-flex;align-items:flex-start}
 .odo{display:inline-block;height:1em;overflow:hidden;line-height:1}
@@ -176,7 +176,7 @@ html[data-v-histhero="archive"] .page-hero::after{background:radial-gradient(75%
 @keyframes flicker{0%,100%{opacity:1}12%{opacity:.86}13%{opacity:1}47%{opacity:.92}48%{opacity:1}71%{opacity:.84}72%{opacity:1}}
 .hero-years{display:none}
 html[data-v-histhero="years"] .hero-years{display:block;position:absolute;right:-1vw;bottom:-5vw;z-index:1;pointer-events:none;
-  font:italic 700 clamp(150px,26vw,420px)/1 var(--f-display,"Bodoni Moda",serif);color:transparent;-webkit-text-stroke:1px rgba(201,162,39,.42);letter-spacing:-.03em}
+  font:italic 700 clamp(150px,26vw,420px)/1 var(--f-display,var(--font-brand));color:transparent;-webkit-text-stroke:1px rgba(201,162,39,.42);letter-spacing:-.03em}
 
 /* ---- timeline backdrop ---- */
 #history > .wrap{position:relative;z-index:1}
@@ -214,7 +214,7 @@ html[data-v-histbg="inkwash"] #history::before{content:"";position:absolute;inse
 html[data-v-histmotion="focus"] .node{filter:brightness(.4) saturate(.4) blur(1.2px);transition:filter .7s var(--ease)}
 html[data-v-histmotion="focus"] .node.on{filter:none}
 .yr-counter{position:fixed;left:max(2vw,16px);bottom:10px;z-index:40;pointer-events:none;opacity:0;transition:opacity .5s;
-  font:italic 700 clamp(80px,11vw,170px)/1 var(--f-display,"Bodoni Moda",serif);color:transparent;-webkit-text-stroke:1px rgba(201,162,39,.55)}
+  font:italic 700 clamp(80px,11vw,170px)/1 var(--f-display,var(--font-brand));color:transparent;-webkit-text-stroke:1px rgba(201,162,39,.55)}
 html[data-v-histmotion="counter"] body.in-history .yr-counter{opacity:1}
 .node.tw .tc{opacity:0}
 
@@ -244,7 +244,7 @@ html[data-v-eranav="ring"] .era-ring{display:grid;place-items:center;position:fi
 .era-ring circle{fill:none;stroke-width:3}
 .era-ring .er-bg{stroke:rgba(242,239,234,.12)}
 .era-ring .er{stroke:var(--gold);stroke-dasharray:214px;stroke-dashoffset:calc(214px - 214px * var(--p,0));transition:stroke-dashoffset .2s}
-.era-ring b{position:relative;font:italic 700 21px/1 var(--f-display,"Bodoni Moda",serif)}
+.era-ring b{position:relative;font:italic 700 21px/1 var(--f-display,var(--font-brand))}
 .era-ring:hover{background:var(--maroon)}
 
 /* ---- closing link ---- */
@@ -256,13 +256,13 @@ html[data-v-histcta="faces"] #history .seclink{gap:14px;padding:10px 26px 10px 1
 html[data-v-histcta="faces"] #history .seclink:hover{background:var(--gold);color:var(--char)}
 html[data-v-histcta="faces"] .faces{display:inline-flex}
 .faces i{display:grid;place-items:center;width:36px;height:36px;margin-left:-10px;border-radius:50%;border:2px solid var(--char);
-  background:var(--maroon);color:var(--paper);font:italic 700 13px/1 "Bodoni Moda",serif;letter-spacing:0}
+  background:var(--maroon);color:var(--paper);font:italic 700 13px/1 var(--font-brand);letter-spacing:0}
 .faces i:first-child{margin-left:0}
 .faces i:nth-child(2){background:var(--slate)}
 .faces i:nth-child(3){background:var(--red)}
 html[data-v-histcta="banner"] #history .seclink{display:flex;justify-content:space-between;align-items:center;width:100%;margin-top:70px;padding:42px 48px;
   position:relative;z-index:0;overflow:hidden;background:var(--maroon);color:var(--paper);
-  font:italic 600 clamp(26px,3.4vw,46px)/1.1 var(--f-display,"Bodoni Moda",serif);text-transform:none;letter-spacing:0}
+  font:italic 600 clamp(26px,3.4vw,46px)/1.1 var(--f-display,var(--font-brand));text-transform:none;letter-spacing:0}
 html[data-v-histcta="banner"] #history .seclink::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .6s var(--ease)}
 html[data-v-histcta="banner"] #history .seclink:hover::before{transform:scaleX(1)}
 html[data-v-histcta="banner"] #history .seclink .arrow{font-style:normal;font-size:1.1em}
@@ -276,11 +276,11 @@ html[data-v-pplhero="mosaic"] .hero-mosaic{display:grid;position:absolute;inset:
   grid-template-columns:repeat(auto-fill,minmax(86px,1fr));grid-auto-rows:86px;
   -webkit-mask-image:linear-gradient(100deg,transparent 15%,#000 65%);mask-image:linear-gradient(100deg,transparent 15%,#000 65%)}
 .hero-mosaic span{display:grid;place-items:center;border:1px solid rgba(242,239,234,.035);
-  font:italic 700 28px/1 var(--f-display,"Bodoni Moda",serif);color:rgba(242,239,234,.07);animation:mosaic 9s var(--d,0s) ease-in-out infinite}
+  font:italic 700 28px/1 var(--f-display,var(--font-brand));color:rgba(242,239,234,.07);animation:mosaic 9s var(--d,0s) ease-in-out infinite}
 @keyframes mosaic{0%,40%,60%,100%{color:rgba(242,239,234,.07);background:transparent}50%{color:var(--gold);background:color-mix(in srgb,var(--maroon-mid) 45%,transparent)}}
 html[data-v-pplhero="marquee"] .hero-names{display:flex;flex-direction:column;justify-content:center;gap:4px;position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
 .hn-row{white-space:nowrap}
-.hn-track{display:inline-block;font:italic 700 clamp(48px,7vw,110px)/1.05 var(--f-display,"Bodoni Moda",serif);color:transparent;
+.hn-track{display:inline-block;font:italic 700 clamp(48px,7vw,110px)/1.05 var(--f-display,var(--font-brand));color:transparent;
   -webkit-text-stroke:1px rgba(242,239,234,.14);animation:slide 60s linear infinite}
 .hn-row:nth-child(2) .hn-track{animation-direction:reverse;animation-duration:75s;-webkit-text-stroke-color:rgba(201,162,39,.22)}
 .hn-row:nth-child(3) .hn-track{animation-duration:90s}
@@ -333,7 +333,7 @@ html[data-v-rostermotion="dim"] .people-pills:hover .person-pill:not(:hover){opa
 .profile-tabs,.acc-btn{display:none}
 html[data-v-profiles="tabs"] .profile-tabs{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:44px}
 .profile-tabs button{display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:10px 28px 12px 0;background:none;border:0;border-bottom:2px solid rgba(242,239,234,.15);
-  cursor:pointer;color:var(--paper-dim);font:italic 600 26px/1.1 var(--f-display,"Bodoni Moda",serif);text-align:left;transition:color .3s,border-color .3s}
+  cursor:pointer;color:var(--paper-dim);font:italic 600 26px/1.1 var(--f-display,var(--font-brand));text-align:left;transition:color .3s,border-color .3s}
 .profile-tabs small{font:600 11px "Barlow Condensed",sans-serif;font-style:normal;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
 .profile-tabs button.on{color:var(--paper);border-bottom-color:var(--gold)}
 html[data-v-profiles="tabs"] .profile:not(.is-active){display:none}
@@ -367,7 +367,7 @@ html[data-v-profilebtn="card"] .pb-card{display:flex}
 .pb-copy .pb-b.done code{color:#fff}
 .pb-card{align-items:center;flex-wrap:wrap;gap:20px;max-width:640px;margin-top:34px;padding:22px 24px;border:1px solid rgba(201,162,39,.3);background:rgba(0,0,0,.18)}
 .pc-ini,.dc-ini{flex:none;display:grid;place-items:center;width:58px;height:58px;border-radius:50%;background:var(--maroon);border:1px solid var(--gold);
-  color:var(--paper);font:italic 700 20px/1 "Bodoni Moda",serif}
+  color:var(--paper);font:italic 700 20px/1 var(--font-brand)}
 .pb-card > div{display:flex;flex-direction:column;gap:2px;flex:1;min-width:180px}
 .pb-card strong{font-size:18px}
 .pb-card > div a{color:var(--paper-dim);font-size:15px}
@@ -402,13 +402,13 @@ html[data-v-profilebtn="card"] .pb-card{display:flex}
 html[data-v-svchero="panels"] .hero-panels{display:grid;grid-template-columns:repeat(4,1fr);position:absolute;inset:0;z-index:1}
 .hero-panels div{display:flex;flex-direction:column;padding:110px 22px 0;border-left:1px solid rgba(201,162,39,.16);cursor:pointer;transition:background .5s var(--ease)}
 .hero-panels span{font:600 11px "Barlow Condensed",sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);opacity:.75}
-.hero-panels b{margin-top:6px;font:italic 600 clamp(18px,1.8vw,26px)/1.1 var(--f-display,"Bodoni Moda",serif);color:rgba(242,239,234,.35);transition:color .4s}
+.hero-panels b{margin-top:6px;font:italic 600 clamp(18px,1.8vw,26px)/1.1 var(--f-display,var(--font-brand));color:rgba(242,239,234,.35);transition:color .4s}
 .hero-panels div:hover,.hero-panels div.lit{background:color-mix(in srgb,var(--maroon) 45%,transparent)}
 .hero-panels div:hover b,.hero-panels div.lit b{color:var(--paper)}
 html[data-v-svchero="panels"] .page-hero .wrap{pointer-events:none}
 html[data-v-svchero="panels"] .page-hero .wrap a{pointer-events:auto}
 html[data-v-svchero="numerals"] .hero-numerals{display:flex;gap:1vw;position:absolute;right:3vw;top:110px;z-index:1;pointer-events:none}
-.hero-numerals span{font:italic 700 clamp(70px,10vw,170px)/1 var(--f-display,"Bodoni Moda",serif);color:transparent;-webkit-text-stroke:1px rgba(242,239,234,.18);
+.hero-numerals span{font:italic 700 clamp(70px,10vw,170px)/1 var(--f-display,var(--font-brand));color:transparent;-webkit-text-stroke:1px rgba(242,239,234,.18);
   animation:numGlow 8s calc(var(--i) * 2s) ease-in-out infinite}
 @keyframes numGlow{0%,30%,100%{color:transparent;-webkit-text-stroke-color:rgba(242,239,234,.18)}12%{color:color-mix(in srgb,var(--red) 70%,transparent);-webkit-text-stroke-color:var(--gold)}}
 @media(max-width:760px){html[data-v-svchero="numerals"] .hero-numerals{top:96px;transform:none;opacity:.6}
@@ -508,13 +508,13 @@ html[data-v-deptnav="top"] .dept-nav a.on{color:var(--paper);background:rgba(201
 html[data-v-deptnav="dial"] .dept-nav .dn-count{display:flex;align-items:baseline;gap:8px;position:fixed;left:24px;bottom:22px;z-index:45;padding:14px 20px;
   background:color-mix(in srgb,var(--char-ink) 90%,transparent);border:1px solid rgba(201,162,39,.3);
   font:600 12px "Barlow Condensed",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--paper-dim)}
-.dn-count b{font:italic 700 34px/1 var(--f-display,"Bodoni Moda",serif);letter-spacing:0;color:var(--gold)}
+.dn-count b{font:italic 700 34px/1 var(--f-display,var(--font-brand));letter-spacing:0;color:var(--gold)}
 .dn-count span{margin-left:8px;color:var(--paper)}
 
 /* ---- department shortcuts: big tiles ---- */
 html[data-v-jump="tiles"] .page-hero .jump{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;max-width:960px;counter-reset:j}
 html[data-v-jump="tiles"] .page-hero .jump a{display:flex;flex-direction:column;gap:26px;padding:20px 20px 18px;background:rgba(0,0,0,.25);border-color:rgba(201,162,39,.35)}
-html[data-v-jump="tiles"] .page-hero .jump a::before{counter-increment:j;content:"0" counter(j);font:italic 700 34px/1 var(--f-display,"Bodoni Moda",serif);letter-spacing:0;color:var(--gold)}
+html[data-v-jump="tiles"] .page-hero .jump a::before{counter-increment:j;content:"0" counter(j);font:italic 700 34px/1 var(--f-display,var(--font-brand));letter-spacing:0;color:var(--gold)}
 html[data-v-jump="tiles"] .page-hero .jump a:hover{background:var(--red);border-color:var(--red);color:var(--paper)}
 html[data-v-jump="tiles"] .page-hero .jump a:hover::before{color:var(--paper)}
 @media(max-width:760px){html[data-v-jump="tiles"] .page-hero .jump{grid-template-columns:1fr 1fr}}
@@ -529,7 +529,7 @@ html[data-v-jump="tiles"] .page-hero .jump a:hover::before{color:var(--paper)}
 .bg-halftone::after{content:"";position:absolute;inset:0;opacity:.4;background:radial-gradient(circle,color-mix(in srgb,var(--red) 70%,transparent) 2.4px,transparent 3px) 6px 6px/26px 26px}
 @keyframes halftone{from{-webkit-mask-position:0 0;mask-position:0 0}to{-webkit-mask-position:100% 0;mask-position:100% 0}}
 .bg-headlines span{position:absolute;left:0;top:calc(6% + var(--i) * 15%);white-space:nowrap;
-  font:italic 700 clamp(60px,9vw,150px)/1 var(--f-display,"Bodoni Moda",serif);color:rgba(242,239,234,.05);
+  font:italic 700 clamp(60px,9vw,150px)/1 var(--f-display,var(--font-brand));color:rgba(242,239,234,.05);
   animation:drift calc(70s + var(--i) * 12s) linear infinite;animation-delay:calc(var(--i) * -11s)}
 .bg-headlines span:nth-child(even){color:transparent;-webkit-text-stroke:1px rgba(201,162,39,.14);animation-direction:reverse}
 @keyframes drift{from{transform:translateX(100vw)}to{transform:translateX(-100%)}}
@@ -554,7 +554,7 @@ html[data-v-newshero="masthead"] .page-hero .lead{max-width:70ch;margin:0 auto;p
 html[data-v-newshero="split"] .hero-teaser{display:flex;flex-direction:column;gap:12px;margin-top:26px;padding:28px 30px;border:1px solid rgba(201,162,39,.4);
   background:color-mix(in srgb,var(--char-ink) 70%,transparent);backdrop-filter:blur(6px);transition:border-color .3s,background .3s}
 .hero-teaser time{font:600 11px "Barlow Condensed",sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
-.hero-teaser strong{font:italic 600 26px/1.15 var(--f-display,"Bodoni Moda",serif)}
+.hero-teaser strong{font:italic 600 26px/1.15 var(--f-display,var(--font-brand))}
 .hero-teaser span{font:600 12px "Barlow Condensed",sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
 .hero-teaser:hover{border-color:var(--gold);background:color-mix(in srgb,var(--maroon) 50%,transparent)}
 
@@ -570,7 +570,7 @@ html[data-v-newsticker="flash"] .news-flash{display:block;position:fixed;left:24
   background:var(--char-ink);border-left:4px solid var(--red);box-shadow:0 18px 40px rgba(0,0,0,.5);translate:-130% 0;transition:translate .7s var(--ease)}
 html[data-v-newsticker="flash"] .news-flash.show{translate:0 0}
 .news-flash small{display:block;margin-bottom:6px;font:700 11px "Barlow Condensed",sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
-.news-flash strong{display:block;margin-bottom:10px;font:italic 600 19px/1.25 var(--f-display,"Bodoni Moda",serif)}
+.news-flash strong{display:block;margin-bottom:10px;font:italic 600 19px/1.25 var(--f-display,var(--font-brand))}
 .news-flash a{font:600 12px "Barlow Condensed",sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
 .nf-x{position:absolute;top:8px;right:10px;background:none;border:0;cursor:pointer;color:var(--paper-dim);font-size:20px}
 
@@ -589,8 +589,8 @@ html[data-v-feature="cover"] .feature .media::after{content:"Featured";position:
   html[data-v-archive="columns"] #news .posts{display:block;columns:3;column-gap:50px;column-rule:1px solid rgba(201,162,39,.25);background:none}
 }
 html[data-v-archive="columns"] #news .post{display:block;break-inside:avoid;padding:0 0 34px;background:none}
-html[data-v-archive="columns"] #news .post h3{font:italic 600 26px/1.15 var(--f-display,"Bodoni Moda",serif)}
-html[data-v-archive="columns"] #news .post:first-child p::first-letter{float:left;margin:6px 8px 0 0;font:italic 700 3.4em/.8 var(--f-display,"Bodoni Moda",serif);color:var(--gold)}
+html[data-v-archive="columns"] #news .post h3{font:italic 600 26px/1.15 var(--f-display,var(--font-brand))}
+html[data-v-archive="columns"] #news .post:first-child p::first-letter{float:left;margin:6px 8px 0 0;font:italic 700 3.4em/.8 var(--f-display,var(--font-brand));color:var(--gold)}
 html[data-v-archive="columns"] #news .post:hover{background:none}
 html[data-v-archive="columns"] #news .post:hover h3{color:var(--gold)}
 html[data-v-archive="carousel"] #news .posts{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;background:none;scrollbar-width:none}
@@ -655,7 +655,7 @@ html[data-v-contacthero="phone"] .hero-contact{display:flex;flex-direction:colum
   html[data-v-contacthero="phone"] .page-hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;column-gap:60px;align-items:end}
   html[data-v-contacthero="phone"] .hero-contact{grid-column:2;grid-row:1 / span 3;margin-top:0}
 }
-.hc-phone{font:italic 700 clamp(40px,5.6vw,84px)/1 var(--f-display,"Bodoni Moda",serif);color:var(--paper);transition:color .3s}
+.hc-phone{font:italic 700 clamp(40px,5.6vw,84px)/1 var(--f-display,var(--font-brand));color:var(--paper);transition:color .3s}
 .hc-phone small{display:block;margin-bottom:10px;font:600 11px "Barlow Condensed",sans-serif;font-style:normal;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
 .hc-phone:hover{color:var(--gold)}
 .hc-mail{align-self:flex-start;font-size:20px;color:var(--paper-dim);border-bottom:1px solid rgba(201,162,39,.4)}
@@ -666,7 +666,7 @@ html[data-v-contacthero="stamp"] .hero-stamp{display:grid;place-items:center;pos
 .hero-stamp::before{content:"";position:absolute;inset:34px;border-radius:50%;border:1px dashed rgba(201,162,39,.4)}
 .hero-stamp .ring-text{display:block;inset:10px;animation-duration:30s}
 .hero-stamp .ring-text i{font-size:11px}
-.hero-stamp b{font:italic 700 clamp(40px,4vw,58px)/1 "Bodoni Moda",serif;color:var(--paper)}
+.hero-stamp b{font:italic 700 clamp(40px,4vw,58px)/1 var(--font-brand);color:var(--paper)}
 @media(max-width:900px){html[data-v-contacthero="stamp"] .hero-stamp{display:none}}
 
 /* ---- section backdrop ---- */
@@ -725,7 +725,7 @@ html[data-v-formflow="steps"] .form.fs-first .fs-back{visibility:hidden}
 .fs-nav button:hover{background:var(--gold);border-color:var(--gold);color:var(--char)}
 html[data-v-formflow="chat"] .form-chat{display:block}
 html[data-v-formflow="chat"] .form .field{display:none}
-.form-chat p{font:italic 400 clamp(22px,2.4vw,30px)/1.95 var(--f-display,"Bodoni Moda",serif);color:var(--paper)}
+.form-chat p{font:italic 400 clamp(22px,2.4vw,30px)/1.95 var(--f-display,var(--font-brand));color:var(--paper)}
 .form-chat :is(input,select){display:inline-block;max-width:100%;margin:0 4px;padding:0 4px;background:transparent;border:0;border-bottom:1px solid var(--gold);outline:none;
   color:var(--gold);font:400 .8em "Barlow Semi Condensed",sans-serif}
 .form-chat select{min-width:12ch}
@@ -817,7 +817,7 @@ html[data-v-directions="tabs"] .dir-panel:not(.is-active),html[data-v-directions
 html[data-v-directions="tabs"] .dir-panel.is-active,html[data-v-directions="steps"] .dir-panel.is-active{animation:popIn .4s var(--ease)}
 html[data-v-directions="accordion"] .dir-panel{border-bottom:1px solid rgba(201,162,39,.25)}
 html[data-v-directions="accordion"] .dir-acc{display:flex;justify-content:space-between;align-items:center;width:100%;padding:20px 0;background:none;border:0;cursor:pointer;text-align:left;
-  color:var(--paper);font:italic 600 24px var(--f-display,"Bodoni Moda",serif)}
+  color:var(--paper);font:italic 600 24px var(--f-display,var(--font-brand))}
 .dir-acc i{font-style:normal;font-size:24px;color:var(--gold);transition:transform .4s var(--ease)}
 html[data-v-directions="accordion"] .dir-panel.is-open .dir-acc i{transform:rotate(45deg)}
 html[data-v-directions="accordion"] .dir-panel:not(.is-open) .dir-body{display:none}
@@ -837,3 +837,7 @@ html[data-v-directions="steps"] .dir-steps{display:block;max-width:75ch;padding:
 .pfphoto.has-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 15%;display:block}
 .profile-tabs{gap:8px 18px}
 .profile-tabs button{font-size:20px;padding:8px 18px 10px 0}
+
+/* placeholder for team members whose CV is not published yet */
+.cv-pending{display:flex;align-items:center;flex-wrap:wrap;gap:14px;margin:6px 0 22px;padding:18px 20px;border:1px dashed rgba(201,162,39,.55);color:var(--paper-dim);font-size:16px}
+.cv-tag{font:700 12px "Barlow Condensed",sans-serif;letter-spacing:.2em;text-transform:uppercase;padding:6px 12px;background:var(--gold);color:var(--char)}

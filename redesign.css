@@ -9,6 +9,13 @@
    ============================================================ */
 
 :root{
+  /* ---- BRAND SWAPS (each is a one-place change) ----
+     Logo font  : set --font-brand (headings, page loader monogram, big numerals) and update the
+                  Google Fonts <link> in each page's <head> to load it.
+     Brand red  : edit the red family below (--red … --maroon-shadow). Every red on the site, the
+                  canvas glow and the 3D scene read these variables.
+     Brand grey : edit the grey family (--slate … --wave-base). */
+  --font-brand:"Bodoni Moda",serif;
   --maroon:#6D0019;
   --maroon-deep:#500013;
   --red:#960018;
@@ -44,7 +51,7 @@ body{
   overflow-x:hidden;width:100%;max-width:100%;
 }
 img,canvas,iframe,svg{max-width:100%}
-h1,h2,h3{font-family:"Bodoni Moda",serif;font-style:italic;font-weight:600;line-height:1.02;letter-spacing:-.01em}
+h1,h2,h3{font-family:var(--font-brand);font-style:italic;font-weight:600;line-height:1.02;letter-spacing:-.01em}
 a{color:inherit;text-decoration:none}
 .wrap{width:min(1240px,92vw);margin:0 auto}
 .eyebrow{
@@ -73,9 +80,9 @@ header.stuck{
 .navrow{display:flex;align-items:center;justify-content:space-between;gap:30px}
 .mark{display:flex;align-items:baseline;gap:12px}
 .mark .fhsn{
-  font-family:"Bodoni Moda",serif;font-style:italic;font-weight:700;
+  font-family:var(--font-brand);font-style:italic;font-weight:700;
   font-size:32px;color:var(--red);letter-spacing:-.03em;line-height:1;
-  text-shadow:0 0 22px rgba(168,30,34,.45);
+  text-shadow:0 0 22px color-mix(in srgb,var(--red) 45%,transparent);
 }
 .mark .full{
   font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;
@@ -201,7 +208,7 @@ h2.big{font-size:clamp(36px,5.2vw,74px);margin-bottom:20px;color:var(--paper)}
 }
 .card .glow{
   position:absolute;width:340px;height:340px;border-radius:50%;pointer-events:none;
-  background:radial-gradient(circle,rgba(168,30,34,.55),transparent 65%);
+  background:radial-gradient(circle,color-mix(in srgb,var(--red) 55%,transparent),transparent 65%);
   opacity:0;transition:opacity .5s;transform:translate(-50%,-50%);
 }
 .card:hover .glow{opacity:1}
@@ -234,7 +241,7 @@ h2.big{font-size:clamp(36px,5.2vw,74px);margin-bottom:20px;color:var(--paper)}
 .node{position:relative;width:50%;padding:0 56px 92px 0;text-align:right}
 .node:nth-child(even){margin-left:50%;padding:0 0 92px 56px;text-align:left}
 .node .yr{
-  font-family:"Bodoni Moda",serif;font-style:italic;font-weight:700;
+  font-family:var(--font-brand);font-style:italic;font-weight:700;
   font-size:clamp(38px,4.4vw,62px);color:var(--red);line-height:1;margin-bottom:8px;
   transition:color .5s;
 }
@@ -280,7 +287,7 @@ h2.big{font-size:clamp(36px,5.2vw,74px);margin-bottom:20px;color:var(--paper)}
 .profile+.profile{margin-top:90px}
 .pfphoto{aspect-ratio:3/4;background:linear-gradient(160deg,var(--slate),var(--char-deep));
   border:1px solid rgba(201,162,39,.3);display:grid;place-items:center;
-  font-family:"Bodoni Moda",serif;font-style:italic;font-weight:700;font-size:4rem;color:rgba(201,162,39,.6)}
+  font-family:var(--font-brand);font-style:italic;font-weight:700;font-size:4rem;color:rgba(201,162,39,.6)}
 .profile h3{font-size:clamp(28px,3.6vw,44px);color:var(--paper);font-style:italic;margin-bottom:6px}
 .profile .role{font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;letter-spacing:.2em;font-size:12px;color:var(--gold);margin-bottom:18px}
 .profile h4{font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;letter-spacing:.18em;font-size:12px;color:var(--gold);margin:22px 0 8px}
@@ -302,7 +309,7 @@ h2.big{font-size:clamp(36px,5.2vw,74px);margin-bottom:20px;color:var(--paper)}
   background:radial-gradient(circle,rgba(255,255,255,.13),transparent 60%);pointer-events:none}
 #offer .wrap{position:relative;z-index:2}
 #offer h2{font-size:clamp(32px,4.6vw,58px);margin-bottom:14px}
-#offer .price{font-family:"Bodoni Moda",serif;font-style:italic;font-weight:700;font-size:clamp(64px,9vw,132px);line-height:1;color:#fff;margin:18px 0 8px;text-shadow:0 6px 40px rgba(0,0,0,.28)}
+#offer .price{font-family:var(--font-brand);font-style:italic;font-weight:700;font-size:clamp(64px,9vw,132px);line-height:1;color:#fff;margin:18px 0 8px;text-shadow:0 6px 40px rgba(0,0,0,.28)}
 #offer .fine{font-size:15px;color:rgba(255,255,255,.8);margin-bottom:34px}
 
 /* news */
@@ -318,7 +325,7 @@ h2.big{font-size:clamp(36px,5.2vw,74px);margin-bottom:20px;color:var(--paper)}
 .feature{display:grid;grid-template-columns:1.05fr .95fr;gap:0;margin-top:10px;
   border:1px solid rgba(201,162,39,.24);overflow:hidden;cursor:pointer}
 .feature .media{background:linear-gradient(150deg,var(--maroon),var(--char-deep));min-height:320px;display:grid;place-items:center;
-  font-family:"Bodoni Moda",serif;font-style:italic;font-weight:700;font-size:3rem;color:rgba(242,239,234,.4)}
+  font-family:var(--font-brand);font-style:italic;font-weight:700;font-size:3rem;color:rgba(242,239,234,.4)}
 .feature .body{padding:52px 46px;align-self:center;background:var(--slate)}
 .feature time{font-family:"Barlow Condensed",sans-serif;letter-spacing:.2em;text-transform:uppercase;font-size:11px;color:var(--gold)}
 .feature h2{font-size:clamp(26px,3.4vw,42px);color:var(--paper);margin:12px 0 14px}
@@ -447,7 +454,7 @@ footer{background:var(--char-ink);padding:30px 0;border-top:2px solid var(--red)
   background:linear-gradient(color-mix(in srgb,var(--maroon-ink) 66%,transparent),color-mix(in srgb,var(--maroon-ink) 86%,transparent))}
 .parallax-strip .px-inner{position:relative;text-align:center;max-width:24ch;padding:0 var(--space-md,1.5rem)}
 .parallax-strip .eyebrow{justify-content:center}
-.parallax-strip h2{font-family:"Bodoni Moda",serif;font-style:italic;font-weight:600;color:var(--paper,#F2EFEA);
+.parallax-strip h2{font-family:var(--font-brand);font-style:italic;font-weight:600;color:var(--paper,#F2EFEA);
   font-size:clamp(30px,5vw,60px);line-height:1.04;margin:0}
 @media(max-width:768px){.parallax-strip .px-bg{inset:0;background-attachment:scroll}}
 @media(prefers-reduced-motion:reduce){#site-loader .kt-dot,#site-loader .kt-l,#site-loader .kt-i{animation:none}[data-fliptext] .fx{animation:none}.btn--trace::after{animation:none}}
