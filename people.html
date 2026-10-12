@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-page="people" data-v-header="solid" data-v-footer="centered" data-v-btn="glow" data-v-progress="line" data-v-profiles="tabs" data-v-pplhero="spot">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,6 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400;1,6..96,600;1,6..96,700&family=Barlow+Semi+Condensed:wght@300;400;500;600&family=Barlow+Condensed:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./redesign.css">
+<link rel="stylesheet" href="./variants.css">
+<link rel="stylesheet" href="./pages.css">
 </head>
 <body>
 <canvas id="grain"></canvas>
@@ -40,24 +42,24 @@
   <div class="wrap">
     <div class="people-pills">
       <div class="role-block reveal"><h4>Partners</h4><div class="pill-row">
-        <a class="person-pill" href="./contact.html">Miriam J van Vuuren</a>
+        <a class="person-pill" href="#p-miriam">Miriam Jansen van Vuuren</a>
         <a class="person-pill" href="#p-millie">Millie Shantall-Lurie</a>
-        <a class="person-pill" href="./contact.html">Regardt Grobler</a>
-        <a class="person-pill" href="./contact.html">Yvette Erasmus</a>
-        <a class="person-pill" href="./contact.html">Jessie Muthusamy</a>
-        <a class="person-pill" href="./contact.html">Riana Heunis</a>
-        <a class="person-pill" href="./contact.html">Thapedi Masindi</a>
+        <a class="person-pill" href="#p-regardt">Regardt Grobler</a>
+        <a class="person-pill" href="#p-yvette">Yvette Erasmus</a>
+        <a class="person-pill" href="#p-thapedi">Thapedi Masindi</a>
       </div></div>
       <div class="role-block reveal"><h4>Senior Associates</h4><div class="pill-row">
-        <a class="person-pill" href="./contact.html">Ronel van Rooyen</a>
+        <a class="person-pill" href="#p-ronel">Ronel van Rooyen</a>
       </div></div>
       <div class="role-block reveal"><h4>Associates</h4><div class="pill-row">
         <a class="person-pill" href="#p-nadia">Nadia Wahab</a>
-        <a class="person-pill" href="./contact.html">Etienne Broodryk</a>
+        <a class="person-pill" href="#p-etienne">Etienne Broodryk</a>
+        <a class="person-pill" href="#p-jainab">Jainab Patel</a>
+        <a class="person-pill" href="#p-victoria">Victoria Carlinsky</a>
       </div></div>
       <div class="role-block reveal"><h4>Consultants</h4><div class="pill-row">
-        <a class="person-pill" href="./contact.html">Gerrie Stolp</a>
-        <a class="person-pill" href="./contact.html">Gerhard Painter</a>
+        <a class="person-pill" href="#p-gerrie">Gerrie Stolp</a>
+        <a class="person-pill" href="#p-gerhard">Gerhard Painter</a>
       </div></div>
     </div>
   </div>
@@ -65,42 +67,111 @@
 
 <section class="pad" style="background:var(--slate-deep)">
   <div class="wrap">
+    <div class="profile reveal" id="p-miriam">
+      <div class="pfphoto has-photo"><img src="./assets/people/miriam.jpg" alt="Miriam Jansen van Vuuren" loading="lazy" width="600" height="800"></div>
+      <div>
+        <h3>Miriam Jansen van Vuuren</h3>
+        <div class="role">Partner</div>
+        <h4>Qualifications</h4><p class="lead" style="font-size:17px">B. Comm LLB (UP)</p><ul class="list"><li>Articles served at Solomon Nicolson Rein &amp; Verster Incorporated</li><li>Admitted as an Attorney: 1999</li><li>Admitted as Conveyancer: 1999</li><li>Partner: 2002</li></ul><h4>Specialisations</h4><ul class="list"><li>Property Law</li><li>Conveyancing</li></ul><h4>Interests</h4><p class="lead" style="font-size:17px">Wildlife and birding</p><a class="seclink" href="mailto:ml@fhsn.co.za">ml@fhsn.co.za <span class="arrow">→</span></a>
+      </div>
+    </div>
+
     <div class="profile reveal" id="p-millie">
-      <div class="pfphoto">MS</div>
+      <div class="pfphoto has-photo"><img src="./assets/people/millie.jpg" alt="Millie Shantall-Lurie" loading="lazy" width="600" height="800"></div>
       <div>
         <h3>Millie Shantall-Lurie</h3>
-        <div class="role">Partner · Notary Public · with the firm since 1995</div>
-        <p class="lead" style="font-size:17px">Company-law specialist and Notary Public, and a long-serving officer of the Pretoria Attorneys' Association.</p>
-        <h4>Specialisations</h4>
-        <ul class="list">
-          <li>Company Law</li>
-          <li>Notarial services — Notarial Bonds and Antenuptial Contracts</li>
-          <li>Commercial contracts, Shareholders' and Sale-of-Shares Agreements</li>
-          <li>Minute books, securities registers and B-BBEE advisory</li>
-        </ul>
-        <h4>Professional bodies</h4>
-        <ul class="list">
-          <li>Executive Committee Member, Pretoria Attorneys' Association (since 2010); Vice-Chair (2017); Treasurer (2020)</li>
-          <li>Executive Committee Member, Gauteng Attorneys' Association (since 2018)</li>
-          <li>Examiner, Legal Practice Council Notarial Practice Examinations (since 2022)</li>
-        </ul>
-        <a class="seclink" href="mailto:millie@fhsn.co.za">millie@fhsn.co.za <span class="arrow">→</span></a>
+        <div class="role">Managing Partner · Notary Public</div>
+        <h4>Qualifications</h4><p class="lead" style="font-size:17px">B. Proc (UNISA)</p><ul class="list"><li>Articles served at Friedland Hart &amp; Partners</li><li>Admitted as an Attorney: 1999</li><li>Admitted as a Notary: 2000</li><li>Partner: 2001</li></ul><h4>Specialisations</h4><ul class="list"><li>Company Law</li><li>Notary Public and specialist in all notarial related services, including the preparation and registration of Notarial Bonds and Antenuptial Contracts</li><li>Drafting of all commercial contracts, including Shareholders&#x27; Agreements, Association Agreements and Sale of Shares Agreements</li><li>Updating Minute Books and Securities Registers of companies</li><li>B-BBEE advisory services in terms of the Black Economic Empowerment Act and the B-BBEE Codes of Good Practice</li></ul><h4>Professional bodies</h4><ul class="list"><li>Executive Committee Member of the Pretoria Attorneys&#x27; Association since 2010</li><li>Vice-Chairperson of the Pretoria Attorneys&#x27; Association since November 2017</li><li>Treasurer of the Pretoria Attorneys&#x27; Association since 2020</li><li>Executive Committee Member of the Gauteng Attorneys&#x27; Association since 2018</li><li>Appointed as an examiner on the Legal Practice Council for the Notarial Practice Examinations since 2022</li><li>Appointed Committee Member on the Investigating and Disciplinary Committee of the Legal Practice Council in 2023</li></ul><h4>Interests</h4><p class="lead" style="font-size:17px">Gym and art</p><a class="seclink" href="mailto:millie@fhsn.co.za">millie@fhsn.co.za <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="profile reveal" id="p-regardt">
+      <div class="pfphoto has-photo"><img src="./assets/people/regardt.jpg" alt="Regardt Grobler" loading="lazy" width="600" height="800"></div>
+      <div>
+        <h3>Regardt Grobler</h3>
+        <div class="role">Partner</div>
+        <h4>Qualifications</h4><p class="lead" style="font-size:17px">LLB (UP)</p><ul class="list"><li>Articles served at Solomon Nicolson Rein &amp; Verster Incorporated</li><li>Admitted as an Attorney: 2004</li><li>Partner: 2006</li></ul><h4>Specialisations</h4><ul class="list"><li>Personal injury</li><li>Medical negligence</li><li>General litigation</li><li>Debt collection</li></ul><h4>Interests</h4><p class="lead" style="font-size:17px">Wildlife, offshore angling, photography and outdoor activities</p><a class="seclink" href="mailto:rgrobler@fhsn.co.za">rgrobler@fhsn.co.za <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="profile reveal" id="p-yvette">
+      <div class="pfphoto has-photo"><img src="./assets/people/yvette.jpg" alt="Yvette Erasmus" loading="lazy" width="600" height="800"></div>
+      <div>
+        <h3>Yvette Erasmus</h3>
+        <div class="role">Partner</div>
+        <h4>Qualifications</h4><p class="lead" style="font-size:17px">LLB (UP)</p><ul class="list"><li>Articles served at Mariana Pera Incorporated</li><li>Admitted as an Attorney: 2005</li><li>Admitted as Conveyancer: 2005</li><li>Joined Solomon Nicolson Rein &amp; Verster Incorporated: 2005</li><li>Partner: September 2012</li></ul><h4>Specialisations</h4><ul class="list"><li>Conveyancing</li><li>Property Law</li></ul><h4>Interests</h4><p class="lead" style="font-size:17px">Wildlife and photography</p><a class="seclink" href="mailto:yc@fhsn.co.za">yc@fhsn.co.za <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="profile reveal" id="p-thapedi">
+      <div class="pfphoto has-photo"><img src="./assets/people/thapedi.jpg" alt="Thapedi Masindi" loading="lazy" width="600" height="800"></div>
+      <div>
+        <h3>Thapedi Masindi</h3>
+        <div class="role">Partner</div>
+        <h4>Qualifications</h4><p class="lead" style="font-size:17px">National Diploma in Tourism Management; Bachelor of Laws (UNISA)</p><ul class="list"><li>Articles served at Friedland Hart Solomon &amp; Nicolson</li><li>Admitted as an Attorney in 2021</li></ul><h4>Specialisations</h4><ul class="list"><li>Foreclosures</li><li>Debt collection</li><li>Administration of Estates</li><li>General Litigation</li><li>Matrimonial and Family Law</li></ul><h4>Interests</h4><p class="lead" style="font-size:17px">Automotive enthusiast; cooking and baking; travel, history and anthropology</p><a class="seclink" href="mailto:thapedi@fhsn.co.za">thapedi@fhsn.co.za <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="profile reveal" id="p-ronel">
+      <div class="pfphoto has-photo"><img src="./assets/people/ronel.jpg" alt="Ronel van Rooyen" loading="lazy" width="600" height="800"></div>
+      <div>
+        <h3>Ronel van Rooyen</h3>
+        <div class="role">Senior Associate</div>
+        <h4>Qualifications</h4><p class="lead" style="font-size:17px">B.Proc (UNISA)</p><ul class="list"><li>Articles served at Solomon Nicolson Rein &amp; Verster Attorneys</li><li>Admitted as an Attorney: May 2001</li><li>Joined Friedland Hart Solomon &amp; Nicolson: June 2019</li></ul><h4>Specialisations</h4><ul class="list"><li>Deceased Estates</li><li>High Court Civil Litigation</li></ul><h4>Interests</h4><p class="lead" style="font-size:17px">Cycling and theatre</p><a class="seclink" href="mailto:ronel@fhsn.co.za">ronel@fhsn.co.za <span class="arrow">→</span></a>
       </div>
     </div>
 
     <div class="profile reveal" id="p-nadia">
-      <div class="pfphoto">NW</div>
+      <div class="pfphoto has-photo"><img src="./assets/people/nadia.jpg" alt="Nadia Wahab" loading="lazy" width="600" height="800"></div>
       <div>
         <h3>Nadia Wahab</h3>
-        <div class="role">Associate · admitted 2025</div>
-        <p class="lead" style="font-size:17px">BCom Law; LLB (UP), <em>cum laude</em>. Articles served at Friedland Hart Solomon &amp; Nicolson.</p>
-        <h4>Specialisations</h4>
-        <ul class="list">
-          <li>Foreclosures</li>
-          <li>Matrimonial and Family Law</li>
-          <li>General Litigation</li>
-        </ul>
-        <a class="seclink" href="mailto:nadia@fhsn.co.za">nadia@fhsn.co.za <span class="arrow">→</span></a>
+        <div class="role">Associate</div>
+        <h4>Qualifications</h4><p class="lead" style="font-size:17px">BCom Law; Bachelor of Laws (UP) (Cum Laude)</p><ul class="list"><li>Articles served at Friedland Hart Solomon and Nicolson Attorneys</li><li>Admitted as an Attorney in 2025</li></ul><h4>Specialisations</h4><ul class="list"><li>Foreclosures</li><li>Matrimonial and Family Law</li><li>General Litigation</li></ul><h4>Interests</h4><p class="lead" style="font-size:17px">Gym, travel and art</p><a class="seclink" href="mailto:nadia@fhsn.co.za">nadia@fhsn.co.za <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="profile reveal" id="p-etienne">
+      <div class="pfphoto has-photo"><img src="./assets/people/etienne.jpg" alt="Etienne Broodryk" loading="lazy" width="600" height="800"></div>
+      <div>
+        <h3>Etienne Broodryk</h3>
+        <div class="role">Associate</div>
+        <h4>Qualifications</h4><p class="lead" style="font-size:17px">Bachelor of Laws (UFS)</p><ul class="list"><li>Articles served at Friedland Hart Solomon and Nicolson Attorneys</li><li>Admitted as an Attorney in 2024</li></ul><h4>Specialisations</h4><ul class="list"><li>Civil Litigation</li><li>Legal Costs</li></ul><h4>Professional bodies</h4><ul class="list"><li>Member of the Pretoria Attorneys Association</li></ul><h4>Interests</h4><p class="lead" style="font-size:17px">Rugby and Formula 1; hiking and travelling; reading</p><a class="seclink" href="mailto:etienne@fhsn.co.za">etienne@fhsn.co.za <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="profile reveal" id="p-jainab">
+      <div class="pfphoto">JP</div>
+      <div>
+        <h3>Jainab Patel</h3>
+        <div class="role">Associate</div>
+        <p class="lead" style="font-size:17px">Joined the firm as an Associate. Full profile to follow.</p><a class="seclink" href="./contact.html">Contact the firm <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="profile reveal" id="p-victoria">
+      <div class="pfphoto">VC</div>
+      <div>
+        <h3>Victoria Carlinsky</h3>
+        <div class="role">Associate</div>
+        <p class="lead" style="font-size:17px">Joined the firm as an Associate. Full profile to follow.</p><a class="seclink" href="./contact.html">Contact the firm <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="profile reveal" id="p-gerrie">
+      <div class="pfphoto has-photo"><img src="./assets/people/gerrie.jpg" alt="Gerrie Stolp" loading="lazy" width="600" height="800"></div>
+      <div>
+        <h3>Gerrie Stolp</h3>
+        <div class="role">Consultant</div>
+        <h4>Qualifications</h4><p class="lead" style="font-size:17px">B. Comm LLB; LLM (Commercial Law) (UP)</p><ul class="list"><li>Articles served at Solomon &amp; Nicolson</li><li>Admitted as an Attorney: 1976</li><li>Admitted as Conveyancer: 1977</li><li>Admitted as Notary: 1977</li><li>Partner: March 1978</li></ul><h4>Specialisations</h4><ul class="list"><li>Property and Commercial Law</li><li>Estate planning</li><li>Insolvency Law</li><li>Tax and general litigation</li></ul><h4>Professional bodies</h4><ul class="list"><li>Sits on the Disciplinary Panel of the Law Society of the Northern Provinces</li><li>Acts as a Commissioner in the Small Claims Court</li></ul><h4>Interests</h4><p class="lead" style="font-size:17px">Golf</p><a class="seclink" href="mailto:cgs@fhsn.co.za">cgs@fhsn.co.za <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="profile reveal" id="p-gerhard">
+      <div class="pfphoto has-photo"><img src="./assets/people/gerhard.jpg" alt="Gerhard Painter" loading="lazy" width="600" height="800"></div>
+      <div>
+        <h3>Gerhard Painter</h3>
+        <div class="role">Consultant</div>
+        <h4>Qualifications</h4><p class="lead" style="font-size:17px">B. Proc (RAU, now UJ); LLB (UP)</p><ul class="list"><li>Articles served at MacRobert, De Villiers &amp; Hitge</li><li>Admitted as an Attorney: February 1982</li><li>Joined Friedland Hart Inc: February 1982</li><li>Partner: March 1985</li><li>Managing Partner from February 2016</li></ul><h4>Specialisations</h4><ul class="list"><li>High Court and Magistrate&#x27;s Court civil litigation</li><li>Delictual claims, in particular claims arising from motor vehicle collisions</li><li>Insurance Law</li></ul><h4>Professional bodies</h4><ul class="list"><li>Served on the Executive Committee of the Pretoria Attorneys&#x27; Association for 19 years</li><li>Serves on the Magistrate&#x27;s Court Committee of the Law Society of South Africa, and served on the Court Practice Committee and the Legal Aid Board Committee of the Law Society of the Northern Provinces for 10 years</li><li>Lectured in Magistrate&#x27;s Court Civil Procedure at the Practical Legal Training Law School and was a senior examiner for the Attorneys&#x27; Admission examination for 25 years</li><li>Served on the Magistrate&#x27;s Commission for three years</li></ul><h4>Interests</h4><p class="lead" style="font-size:17px">Golf</p><a class="seclink" href="mailto:painter@fhsn.co.za">painter@fhsn.co.za <span class="arrow">→</span></a>
       </div>
     </div>
   </div>
@@ -117,5 +188,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="./redesign.js"></script>
+<script src="./variants.js"></script>
+<script src="./pages.js"></script>
 </body>
 </html>
