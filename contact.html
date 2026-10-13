@@ -4,20 +4,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact — Friedland Hart Solomon &amp; Nicolson · Pretoria</title>
-<meta name="description" content="Contact Friedland Hart Solomon & Nicolson — Monument Office Park, Pretoria. Tel 012 424 0200.">
+<meta name="description" content="Contact Friedland Hart Solomon & Nicolson — Monument Office Park, Pretoria. Tel +27 12 424 0200.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400;1,6..96,600;1,6..96,700&family=Barlow+Semi+Condensed:wght@300;400;500;600&family=Barlow+Condensed:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./redesign.css">
 <link rel="stylesheet" href="./variants.css">
 <link rel="stylesheet" href="./pages.css">
+<script src="./config.js"></script>
 </head>
 <body>
 <canvas id="grain"></canvas>
 
 <header id="hdr">
   <div class="wrap navrow">
-    <a class="mark" href="./index.html"><span class="fhsn">fhsn</span><span class="full">Friedland Hart Solomon &amp; Nicolson</span></a>
+    <!-- LOGO SLOT: set CONFIG.logo.src in config.js — the supplied logo replaces the "fhsn" wordmark on every page -->
+    <a class="mark" data-logo-slot href="./index.html"><span class="fhsn">fhsn</span><span class="full">Friedland Hart Solomon &amp; Nicolson</span></a>
     <nav id="nav"><ul>
       <li><a href="./index.html">Home</a></li>
       <li><a href="./history.html">History</a></li>
@@ -34,7 +36,7 @@
   <div class="wrap">
     <p class="eyebrow">Contact</p>
     <h1>Tell us what <em>you're facing.</em></h1>
-    <p class="lead">Call the switchboard and ask for the department, or email the partner directly. We'll tell you honestly whether it's a matter we should take.</p>
+    <p class="lead">Call the switchboard and ask for the department, or send an enquiry and it will go to the head of the relevant department.</p>
   </div>
 </section>
 
@@ -42,27 +44,29 @@
   <div class="wrap cgrid">
     <div>
       <p class="eyebrow reveal">Send an enquiry</p>
-      <form class="form reveal" action="mailto:millie@fhsn.co.za" method="post" enctype="text/plain">
-        <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" required></div>
-        <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" required></div>
-        <div class="field"><label for="f-phone">Phone (optional)</label><input id="f-phone" name="phone" type="tel"></div>
+      <form class="form reveal" data-lead="enquiry">
+        <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required maxlength="100"></div>
+        <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required maxlength="160"></div>
+        <div class="field"><label for="f-phone">Phone (optional)</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" maxlength="40"></div>
         <div class="field"><label for="f-dept">Department</label>
-          <select id="f-dept" name="department">
+          <select id="f-dept" name="department" required>
             <option value="" disabled selected>Select a department</option>
-            <option>Companies</option><option>Litigation</option><option>Conveyancing</option><option>Administration of Estates</option><option>Other</option>
+            <option value="corporate">Companies</option><option value="litigation">Litigation</option><option value="property">Conveyancing</option><option value="estates">Administration of Estates</option><option value="notarial">Notarial</option>
           </select>
         </div>
-        <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" rows="5"></textarea></div>
-        <button type="submit" class="btn btn--solid submit"><span class="fill"></span><span>Send enquiry</span><span class="arrow">→</span></button>
+        <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" rows="5" maxlength="3000"></textarea></div>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="btn btn--solid submit"><span class="fill"></span><span>Send enquiry</span><span class="arrow">&rarr;</span></button>
+        <p class="form-fine">Your enquiry is sent to the head of the department you choose.</p>
       </form>
     </div>
     <aside>
       <p class="eyebrow reveal">Chambers</p>
+      <div class="detail reveal"><span class="k">Firm</span><span class="v">Friedland Hart Solomon and Nicolson Inc<br><small>Registration No. 2026/177513/21</small></span></div>
       <div class="detail reveal"><span class="k">Physical address</span><span class="v">4-301 Monument Office Park<br>79 Steenbok Ave, Monument Park<br>Pretoria</span></div>
-      <div class="detail reveal"><span class="k">Postal address</span><span class="v">P.O. Box 645 &amp; 1003<br>Pretoria 0001 · Docex 11, Pretoria</span></div>
-      <div class="detail reveal"><span class="k">Telephone</span><span class="v"><a href="tel:+27124240200">012 424 0200</a></span></div>
-      <div class="detail reveal"><span class="k">Fax</span><span class="v">086 687 3984</span></div>
-      <div class="detail reveal"><span class="k">Email</span><span class="v"><a href="mailto:millie@fhsn.co.za">millie@fhsn.co.za</a></span></div>
+      <div class="detail reveal"><span class="k">Postal address</span><span class="v">P.O. Box 645 &amp; 1003<br>Pretoria 0001</span></div>
+      <div class="detail reveal"><span class="k">Docex</span><span class="v">Docex 11, Pretoria</span></div>
+      <div class="detail reveal"><span class="k">Telephone</span><span class="v"><a href="tel:+27124240200">+27 12 424 0200</a></span></div>
       <div class="detail reveal"><span class="k">Practice</span><span class="v">Attorneys · Notaries · Conveyancers · Administrators of Estates</span></div>
     </aside>
   </div>
@@ -80,10 +84,19 @@
 </section>
 
 <footer>
+  <div class="wrap foot-block">
+    <p class="foot-name">Friedland Hart Solomon and Nicolson Inc</p>
+    <p class="foot-reg">Registration No. 2026/177513/21</p>
+    <address class="foot-addr">
+      <span>4-301 Monument Office Park, 79 Steenbok Ave, Monument Park, Pretoria</span>
+      <span>P.O. Box 645 &amp; 1003, Pretoria 0001 &middot; Docex 11, Pretoria</span>
+      <span>Tel <a href="tel:+27124240200">+27 12 424 0200</a></span>
+    </address>
+    <ul class="social" data-social aria-label="Social media"></ul>
+  </div>
   <div class="wrap frow">
-    <span>© 2026 Friedland Hart Solomon &amp; Nicolson</span>
-    <span>Monument Office Park, Pretoria · <a href="tel:+27124240200">012 424 0200</a></span>
-    <span>Attorneys · Notaries · Conveyancers</span>
+    <span>&copy; 2026 Friedland Hart Solomon and Nicolson Inc</span>
+    <span>Attorneys &middot; Notaries &middot; Conveyancers &middot; Administrators of Estates</span>
   </div>
 </footer>
 
@@ -92,5 +105,6 @@
 <script src="./redesign.js"></script>
 <script src="./variants.js"></script>
 <script src="./pages.js"></script>
+<script src="./forms.js"></script>
 </body>
 </html>

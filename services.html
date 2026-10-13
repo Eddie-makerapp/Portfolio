@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="./redesign.css">
 <link rel="stylesheet" href="./variants.css">
 <link rel="stylesheet" href="./pages.css">
+<script src="./config.js"></script>
 </head>
 <body class="svc-aurora-page">
 <!-- Aurora background (whole page, brand-recoloured) -->
@@ -20,7 +21,8 @@
 
 <header id="hdr">
   <div class="wrap navrow">
-    <a class="mark" href="./index.html"><span class="fhsn">fhsn</span><span class="full">Friedland Hart Solomon &amp; Nicolson</span></a>
+    <!-- LOGO SLOT: set CONFIG.logo.src in config.js — the supplied logo replaces the "fhsn" wordmark on every page -->
+    <a class="mark" data-logo-slot href="./index.html"><span class="fhsn">fhsn</span><span class="full">Friedland Hart Solomon &amp; Nicolson</span></a>
     <nav id="nav"><ul>
       <li><a href="./index.html">Home</a></li>
       <li><a href="./history.html">History</a></li>
@@ -36,8 +38,8 @@
 <section class="page-hero">
   <div class="wrap">
     <p class="eyebrow">Professional services</p>
-    <h1>Four departments. <em>One partnership.</em></h1>
-    <p class="lead">Each department is led by a partner, not passed down a chain. You deal with the person who signs the work.</p>
+    <h1>Four departments. <em>One firm.</em></h1>
+    <p class="lead">Send an enquiry and it goes to the head of the relevant department.</p>
     <div class="jump">
       <a href="#companies">Companies</a><a href="#litigation">Litigation</a><a href="#conveyancing">Conveyancing</a><a href="#estates">Estates</a>
     </div>
@@ -46,61 +48,26 @@
 
 <section class="svc" id="companies">
   <div class="wrap grid">
-    <div class="reveal"><div class="num">Dept 01</div><h2>Companies</h2><p class="lead" style="font-size:17px">Revision of company documents, new MOIs and special resolutions, with guidance under the Companies Act 71 of 2008. Shelf companies can be ordered online.</p><a class="btn btn--solid reveal" href="mailto:millie@fhsn.co.za" style="margin-top:22px"><span class="fill"></span><span>Order a shelf company</span><span class="arrow">→</span></a></div>
-    <ul class="list reveal">
-      <li>Shelf companies compliant with the new Act; expeditious and defensive name reservations</li>
-      <li>Formation and registration of companies; amendments to existing close corporations</li>
-      <li>Reinstatement and de-registration of companies and close corporations</li>
-      <li>Registration of prospectuses and rights offers; objections to company and trading names</li>
-      <li>Voluntary liquidations by members/creditors under the 1973 Act and the new Act</li>
-      <li>Special resolutions and all statutory CoR forms lodged with the CIPC</li>
-      <li>Shareholders', association, sale-of-shares and joint-venture agreements</li>
-      <li>Company searches; annual returns, audited AFS and XBRL conversion</li>
-      <li>B-BBEE certificates; beneficial ownership and securities registers</li>
-      <li>Registration of trusts and Master's Office attendances</li>
-      <li><strong>Contact — Millie Shantall-Lurie</strong></li>
-    </ul>
+    <div class="reveal"><div class="num">Dept 01</div><h2>Companies</h2><p class="lead" style="font-size:17px">FHSN provides assistance with the revision of current Company Documents, the drafting of a new MOI and any special resolution documentation pertaining to either the amendment or the adoption of a new MOI, and any guidance or advice with respect to the Companies Act 71 of 2008.</p><p class="lead" style="font-size:17px">You can now order shelf companies online. Special Offer! Purchase a Shelf Company now for only R600 exclusive of VAT and disbursements and exclusive of any corporate changes thereto. Limited time offer.</p><a class="btn btn--solid" href="./shelf-companies.html#order" style="margin-top:22px"><span class="fill"></span><span>Order a shelf company</span><span class="arrow">&rarr;</span></a></div>
+    <div class="reveal"><p class="svc-sub">Our services include</p><ul class="list"><li>Availability of shelf companies compliant with the new Act;</li><li>Expeditious name reservations and defensive name applications;</li><li>The formation and registration of companies in terms of the new Act;</li><li>All amendments to existing close corporations;</li><li>The reinstatement of companies and close corporations and de-registration applications in respect of companies and close corporations;</li><li>The registration of prospectuses and rights offers;</li><li>Objections to company and close corporation names and trading names and various other applications to both the Companies and Intellectual Property Commission and the Companies Tribunal;</li><li>Voluntary liquidations by members/creditors for both companies and close corporations in terms of the former 1973 Act and the new Act;</li><li>The preparation and registration of all types of special resolutions and all other statutory forms to be lodged with the Companies and Intellectual Property Commission;</li><li>The drafting of shareholders’ agreements, association agreements, sale of shares agreements and joint venture agreements;</li><li>Company searches, hard-copy and certificate requests;</li><li>Electronic lodgment of Annual Returns and the submission of audited annual Financial Statements and Financial Accountability Supplements to the Companies and Intellectual Property Commission and the conversion of audited Annual Financial Statements into XBRL format as required by the Companies and Intellectual Property Commission;</li><li>Electronic and manual lodgment of all other CoR forms in terms of the Regulations to the new Act;</li><li>All notarial services;</li><li>Analysis on and advice on the partial and total revision of the Memoranda and other statutory documents of all pre-existing and new companies and existing close corporations;</li><li>Application for a B-BBEE Certificate from the Companies and Intellectual Property Commission in the case of the annual turnover of a company being less than 10 million Rand;</li><li>Assistance with the submission of Beneficial Ownership Information, Beneficial Ownership Securities Registers, Securities Registers with respect to direct shareholding and Members’ Registers to the Companies and Intellectual Property Commission in compliance with the amended Companies Regulations, 2011; and</li><li>Assistance with the registration of Trusts, all amendments thereto and Master’s Office attendances.</li></ul><details class="moi"><summary>Memoranda of Incorporation: what pre-existing companies should know</summary><p>Although the 30th of April 2013, which was the supposed cut-off date for the submission of Memoranda of Incorporation for pre-existing companies (i.e. companies incorporated in terms of the former 1973 Companies Act) to align the provisions of their current Memoranda and Articles of Association with the provisions of the Companies Act 71 of 2008, as amended (“the new Act”), has now come and gone, don’t despair, as there is no restriction on a pre-existing company from adopting an entirely new Memorandum of Incorporation at any stage, or from amending any of the provisions in its existing Memorandum and Articles of Association (now referred to as a Memorandum of Incorporation), which could not be effected by the 30th April 2013.</p><p>The Memorandum of Incorporation of a pre-existing company can still be amended by a pre-existing company at any given stage and the provisions of Item 4(2) of Schedule 5 to the new Act have been misinterpreted as having meant that a pre-existing company could only amend its existing Memorandum of Incorporation or adopt an entirely new Memorandum of Incorporation before or by 30 April 2013, which is not the case at all and which provision only meant that up and until 30 April 2013, a pre-existing company could file an amendment to its Memorandum of Incorporation without charge.</p><p>As from the 1st of May 2013, any special resolution can still be passed for either the amendment of an existing Memorandum of Incorporation or for the adoption of an entirely new Memorandum of Incorporation for either a pre-existing company, or a company incorporated in terms of the new Act, which will attract a fee of R250.00, which is now levied by the Companies and Intellectual Property Commission.</p><p>Take note of the fact that a pre-existing company still has the choice of either amending certain existing clauses in its Memorandum of Incorporation, or adopting an entirely new Memorandum of Incorporation (“MOI”) to comply with the provisions of the new Act.</p><p>Companies and specifically shareholders must still guard against the implementation of the default provisions contained in the new Act and ensure that their Memoranda of Incorporation are tailor-made to suit their particular circumstances.</p><p>Failure to amend a pre-existing company’s Memorandum of Incorporation could result in negative and onerous unintended consequences for the company.</p></details><p class="lead" style="font-size:16px">You are welcome to contact our offices should you require any assistance with the revision of your current Company Documents, or with the drafting and adopting of a new MOI and any special resolution documentation pertaining to either the amendment or the adoption of a new MOI, or if you simply require any guidance or advice with respect to the new Act.</p></div>
   </div>
 </section>
-
 <section class="svc" id="litigation">
   <div class="wrap grid">
-    <div class="reveal"><div class="num">Dept 02</div><h2>Litigation</h2><p class="lead" style="font-size:17px">One of the largest general and correspondent litigation practices in Pretoria — all matters in the High Courts, Regional and District Magistrates' Courts and other dispute-resolution forums.</p></div>
-    <ul class="list reveal">
-      <li>High Court, Regional and District Magistrates' Court litigation</li>
-      <li>General and correspondent litigation</li>
-      <li>Foreclosures and debt recovery</li>
-      <li>Matrimonial and family law</li>
-      <li>Alternative dispute resolution</li>
-      <li><strong>Contact — Regardt Grobler · Thapedi Masindi, with Gerhard Painter and Gerrie Stolp consulting</strong></li>
-    </ul>
+    <div class="reveal"><div class="num">Dept 02</div><h2>Litigation</h2><p class="lead" style="font-size:17px">Friedland Hart Solomon &amp; Nicolson prides itself on having one of the largest general litigation and correspondent litigation practices in Pretoria.</p></div>
+    <div class="reveal"><p class="lead" style="font-size:17px">We deal with all types of cases in the High Courts, Regional and District Magistrate’s Courts as well as other dispute resolution forums.</p></div>
   </div>
 </section>
-
 <section class="svc" id="conveyancing">
   <div class="wrap grid">
-    <div class="reveal"><div class="num">Dept 03</div><h2>Conveyancing</h2><p class="lead" style="font-size:17px">Born of the merger between two reputable firms with more than 175 combined years in property, the Conveyancing Department serves clients throughout South Africa.</p></div>
-    <ul class="list reveal">
-      <li>Registration of transfers and bonds</li>
-      <li>Subdivisions and consolidations</li>
-      <li>Servitudes</li>
-      <li>Opening of townships and Sectional Title Schemes</li>
-      <li>Drafting of residential and commercial contracts</li>
-      <li><strong>Contact — Miriam Jansen van Vuuren (head) · Yvette Erasmus</strong></li>
-    </ul>
+    <div class="reveal"><div class="num">Dept 03</div><h2>Conveyancing</h2><p class="lead" style="font-size:17px">Born of the merger between two reputable law firms, both with a long and proud history in the legal fraternity of Pretoria, and having more than 175 years combined experience in the property field, the Conveyancing Department of Friedland Hart Solomon &amp; Nicolson provides property law and conveyancing services to clients throughout South Africa.</p></div>
+    <div class="reveal"><p class="lead" style="font-size:17px">We specialise in all aspects of property law and offer a comprehensive range of services aimed at assisting individual and corporate clients, including:</p><ul class="list"><li>registration of transfers and bonds;</li><li>subdivisions;</li><li>consolidations;</li><li>servitudes;</li><li>opening of townships and Sectional Title Schemes</li><li>drafting of residential and commercial contracts.</li></ul><p class="lead" style="font-size:16px">We strive to achieve client satisfaction at all times and offer friendly and practical advice on all aspects of property law. We regard ourselves as a department with the highest integrity and are confident that we have the experience and expertise to guide clients through a complicated process, from start to finish.</p><p class="lead" style="font-size:16px">The Department has up to date communication capabilities, enabling clients to obtain information fast, saving time and money.</p><p class="lead" style="font-size:16px">For more information regarding transfer fees, bond costs, etc., send us an enquiry.</p></div>
   </div>
 </section>
-
 <section class="svc" id="estates">
   <div class="wrap grid">
-    <div class="reveal"><div class="num">Dept 04</div><h2>Administration of Estates</h2><p class="lead" style="font-size:17px">All estates and Master's Office matters, including attendances at the Master's Office of the North Gauteng High Court for deceased and insolvent estates, trusts and endorsements.</p></div>
-    <ul class="list reveal">
-      <li>Drawing of Wills and vetting existing Wills for current compliance</li>
-      <li>Drafting of Trusts and registration at the Master of the North Gauteng High Court</li>
-      <li>Reporting of estates and winding-up per legislation and prescribed procedures</li>
-      <li>Endorsements on fixed-property transactions relating to estates</li>
-      <li><strong>Contact — Ronel van Rooyen</strong></li>
-    </ul>
+    <div class="reveal"><div class="num">Dept 04</div><h2>Administration of Estates</h2><p class="lead" style="font-size:17px">All estates and Master’s office matters are attended to, including attendances at the Master’s Office of the North Gauteng High Court, regarding deceased and insolvent estates, trusts, obtaining of endorsements and general searches.</p></div>
+    <div class="reveal"><p class="lead" style="font-size:17px">The Estates Department provides the following professional services:</p><ul class="list"><li>Attending to the drawing of Wills and vetting existing Wills to ensure compliance with current legislation.</li><li>Drafting of Trusts and attending to the registration thereof at the Master of the North Gauteng High Court.</li><li>Attending to the reporting of estates at the Master’s Office of the North Gauteng High Court and any other Master’s Office and attending to the winding up of estates according to legislation and prescribed Master’s procedures.</li><li>Attendances at the Master of the North Gauteng High Court to obtain endorsements on fixed property transactions relating to estates.</li></ul></div>
   </div>
 </section>
 
@@ -110,15 +77,24 @@
     <h2 class="reveal">Shelf companies, ordered online.</h2>
     <div class="price reveal">R600</div>
     <p class="fine reveal">Excluding VAT, disbursements and any corporate changes. Limited time offer.</p>
-    <a class="btn reveal" href="mailto:millie@fhsn.co.za" style="border-color:#fff"><span class="fill"></span><span>Place your order</span><span class="arrow">→</span></a>
+    <a class="btn reveal" href="./shelf-companies.html#order" style="border-color:#fff"><span class="fill"></span><span>Place your order</span><span class="arrow">→</span></a>
   </div>
 </section>
 
 <footer>
+  <div class="wrap foot-block">
+    <p class="foot-name">Friedland Hart Solomon and Nicolson Inc</p>
+    <p class="foot-reg">Registration No. 2026/177513/21</p>
+    <address class="foot-addr">
+      <span>4-301 Monument Office Park, 79 Steenbok Ave, Monument Park, Pretoria</span>
+      <span>P.O. Box 645 &amp; 1003, Pretoria 0001 &middot; Docex 11, Pretoria</span>
+      <span>Tel <a href="tel:+27124240200">+27 12 424 0200</a></span>
+    </address>
+    <ul class="social" data-social aria-label="Social media"></ul>
+  </div>
   <div class="wrap frow">
-    <span>© 2026 Friedland Hart Solomon &amp; Nicolson</span>
-    <span>Monument Office Park, Pretoria · <a href="tel:+27124240200">012 424 0200</a></span>
-    <span>Attorneys · Notaries · Conveyancers</span>
+    <span>&copy; 2026 Friedland Hart Solomon and Nicolson Inc</span>
+    <span>Attorneys &middot; Notaries &middot; Conveyancers &middot; Administrators of Estates</span>
   </div>
 </footer>
 

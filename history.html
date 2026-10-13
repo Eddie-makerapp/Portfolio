@@ -11,13 +11,15 @@
 <link rel="stylesheet" href="./redesign.css">
 <link rel="stylesheet" href="./variants.css">
 <link rel="stylesheet" href="./pages.css">
+<script src="./config.js"></script>
 </head>
 <body>
 <canvas id="grain"></canvas>
 
 <header id="hdr">
   <div class="wrap navrow">
-    <a class="mark" href="./index.html"><span class="fhsn">fhsn</span><span class="full">Friedland Hart Solomon &amp; Nicolson</span></a>
+    <!-- LOGO SLOT: set CONFIG.logo.src in config.js — the supplied logo replaces the "fhsn" wordmark on every page -->
+    <a class="mark" data-logo-slot href="./index.html"><span class="fhsn">fhsn</span><span class="full">Friedland Hart Solomon &amp; Nicolson</span></a>
     <nav id="nav"><ul>
       <li><a href="./index.html">Home</a></li>
       <li><a href="./history.html" class="active">History</a></li>
@@ -34,7 +36,7 @@
   <div class="wrap">
     <p class="eyebrow">History</p>
     <h1>The line runs <em>unbroken.</em></h1>
-    <p class="lead">Two Pretoria practices, each with its own century behind it, joined forces in 2009. This is how the firm you brief today was assembled.</p>
+    <p class="lead">The well-known and longstanding practices of Friedland Hart &amp; Partners and Solomon Nicolson joined forces in 2009 under the name and style of Friedland Hart Solomon &amp; Nicolson.</p>
   </div>
 </section>
 
@@ -43,24 +45,38 @@
     <div class="tl" id="tl">
       <div class="spine"></div>
       <div class="ink" id="ink"></div>
-      <div class="node"><span class="dot"></span><div class="yr">1898</div><h3>Schalk Willem Pienaar opens practice</h3><p>The founding line of Solomon &amp; Nicolson begins in Pretoria, four years before the end of the Anglo-Boer War.</p></div>
-      <div class="node"><span class="dot"></span><div class="yr">1902</div><h3>Pienaar and Marais</h3><p><span class="cursor-term" tabindex="0" data-desc="A cousin of the well-known poet Eugene Marais. After S.W. Pienaar left, Marais was joined by Norman Price — later Judge N.C.B. Price — and Charles William Clark, the firm becoming Marais Price and Clark.">Rupert Ford Marais</span> joins in partnership. The firm later becomes Marais Price and Clark under Norman Price and Charles William Clark.</p></div>
-      <div class="node"><span class="dot"></span><div class="yr">1927</div><h3>Clark Solomon &amp; Nicolson</h3><p><span class="cursor-term" tabindex="0" data-desc="Former Secretary of the Transvaal Law Society and Town Clerk of Pretoria. He joined in 1927, when the firm became known as Clark Solomon & Nicolson.">Malcolm Graham Nicolson</span> — former Secretary of the Transvaal Law Society and Town Clerk of Pretoria — joins the firm.</p></div>
-      <div class="node"><span class="dot"></span><div class="yr">1930</div><h3>Friedland Hart &amp; Partners formed</h3><p>The practices of <span class="cursor-term" tabindex="0" data-desc="Served in the South African Forces during the Second World War with the rank of lieutenant colonel, and was awarded the Order of the British Empire.">Sidney &ldquo;Sonny&rdquo; Charles Hart</span> and <span class="cursor-term" tabindex="0" data-desc="Brother of Phillip Friedland, senior partner of the Johannesburg firm then known as Edward Nathan Friedland & Mansell.">David &ldquo;Ivy&rdquo; Israel Friedland</span> amalgamate. Sonny Hart later serves in the South African Forces and is awarded the Order of the British Empire.</p></div>
-      <div class="node"><span class="dot"></span><div class="yr">1991</div><h3>Solomon Nicolson Rein &amp; Verster</h3><p>Solomon &amp; Nicolson merges with Rein &amp; Verster; from 2006 the practice is known simply as Solomon Nicolson.</p></div>
-      <div class="node"><span class="dot"></span><div class="yr">1998</div><h3>A centenary</h3><p>Solomon Nicolson marks one hundred years of continuous practice in Pretoria.</p></div>
-      <div class="node"><span class="dot"></span><div class="yr">2009</div><h3>Friedland Hart Solomon &amp; Nicolson</h3><p>The two longstanding practices join forces under a single name and style — the firm as it stands today.</p></div>
-      <div class="node"><span class="dot"></span><div class="yr">Today</div><h3>Shantall-Lurie at the helm</h3><p><span class="cursor-term" tabindex="0" data-desc="With the firm since 1995. Partner and Notary Public, and an officer of the Pretoria Attorneys' Association.">Millie Shantall-Lurie</span> leads the firm as Managing Partner, with <span class="cursor-term" tabindex="0" data-desc="With the firm since 1982 and Managing Partner from 2016. He served on the Executive Committee of the Pretoria Attorneys' Association for 19 years.">Gerhard Painter</span> continuing as a consultant.</p></div>
+      <div class="node"><span class="dot"></span><div class="yr">1898</div><h3>Schalk Willem Pienaar commences practice</h3><p>Solomon &amp; Nicolson traces its history back to its founder, Schalk Willem Pienaar who commenced practice in 1898 in Pretoria.</p></div>
+      <div class="node"><span class="dot"></span><div class="yr">1902</div><h3>Pienaar and Marais</h3><p>Mr. Pienaar was joined in partnership by <span class="cursor-term" tabindex="0" data-desc="A cousin of the well known poet, Eugene Marais.">Rupert Ford Marais</span> (a cousin of the well known poet, Eugene Marais) shortly after the end of the Anglo-Boer War in 1902. They practiced under the name of Pienaar and Marais and after S. W. Pienaar left, Rupert Marais was joined by <span class="cursor-term" tabindex="0" data-desc="Later to become Judge N. C. B. Price.">Norman Price</span> (later to become Judge N. C. B. Price) and <span class="cursor-term" tabindex="0" data-desc="Charlie Clark became active in politics and is remembered for giving up his parliamentary seat to General J. C. Smuts after the latter’s defeat in the 1948 elections.">Charles William Clark</span> and the firm became known as Marais Price and Clark. (Charlie Clark, who became active in politics, will be remembered for giving up his parliamentary seat to General J. C. Smuts after the latter’s defeat in the 1948 elections).</p></div>
+      <div class="node"><span class="dot"></span><div class="yr">1922</div><h3>Ivan Solomon joins</h3><p>In 1922 <span class="cursor-term" tabindex="0" data-desc="Well-known businessman, patron of the arts and Mayor of Pretoria.">Ivan Solomon</span> (well-known businessman, patron of the arts and Mayor of Pretoria) joined the firm.</p></div>
+      <div class="node"><span class="dot"></span><div class="yr">1927</div><h3>Clark Solomon &amp; Nicolson</h3><p><span class="cursor-term" tabindex="0" data-desc="A former Secretary of the Transvaal Law Society and Town Clerk of Pretoria.">Malcolm Graham Nicolson</span> (a former Secretary of the Transvaal Law Society and Town Clerk of Pretoria) joined the firm in 1927 when it became known as Clark Solomon &amp; Nicolson. On the retirement of Mr. Clark, the firm became known as Solomon &amp; Nicolson. Arnold Kretzmar, Melville Graham (Mev) Nicolson and Alexander John (Robbie) Robertson joined the firm during the forties.</p></div>
+      <div class="node"><span class="dot"></span><div class="yr">1930</div><h3>Friedland Hart &amp; Partners</h3><p>Friedland Hart &amp; Partners came into being with the amalgamation of the practices of <span class="cursor-term" tabindex="0" data-desc="Served in the South African Forces during the Second World War with the rank of lieutenant colonel and was awarded the Order of the British Empire.">Sidney “Sonny” Charles Hart</span> and <span class="cursor-term" tabindex="0" data-desc="The brother of Phillip Friedland, the senior partner of the well-known firm in Johannesburg known at the time as Edward Nathan Friedland &amp; Mansell.">David “Ivy” Israel Friedland</span> in 1930. During the Second World War, Sonny Hart served in the South African Forces with the rank of lieutenant colonel and was awarded the Order of the British Empire. Ivy was the brother of Phillip Friedland, the senior partner of the well-known firm in Johannesburg known at the time as Edward Nathan Friedland &amp; Mansell.</p></div>
+      <div class="node"><span class="dot"></span><div class="yr">1950</div><h3>Friedland Hart &amp; Cooper</h3><p>In 1950, attorney Aaron “Arie” Cooper joined the partnership, which then became known as Friedland Hart &amp; Cooper. David Bernard Novis who was articled at the firm, subsequently became a partner, retired as senior partner in 1999 and was a consultant at the practice until he passed away in 2016.</p></div>
+      <div class="node"><span class="dot"></span><div class="yr">1962</div><h3>Roger Botha Cleaver</h3><p>Mr. Justice Roger Botha Cleaver was a partner in the practice from 1962 to 1996, and served for many years as a member of the Transvaal Law Society and, on more than one occasion, as President of the Society. In 1997 he became the first Pretoria attorney to be elevated to the Bench and served as a Judge in the Cape Provincial Division until his retirement in 2012.</p></div>
+      <div class="node"><span class="dot"></span><div class="yr">1967</div><h3>Rodney Jack Falkson</h3><p>Rodney Jack Falkson joined the firm in 1967 and became a partner shortly thereafter. He practised as a consultant of the firm until his untimely death in 2019.</p></div>
+      <div class="node"><span class="dot"></span><div class="yr">1972</div><h3>Martin Rodney Brauer</h3><p>Martin Rodney Brauer joined the firm in 1972 as an articled clerk and became a partner in 1977. Martin served as the Managing Partner from 2009 until 2016 and thereafter as the Financial Partner of the firm. Martin retired from the practice in February 2018.</p></div>
+      <div class="node"><span class="dot"></span><div class="yr">1991</div><h3>Solomon Nicolson Rein &amp; Verster</h3><p>The firm was known as Solomon &amp; Nicolson until 1991 when it merged with Rein &amp; Verster to become Solomon Nicolson Rein &amp; Verster and from 2006 was known simply as Solomon Nicolson.</p></div>
+      <div class="node"><span class="dot"></span><div class="yr">1998</div><h3>The centenary</h3><p>The firm celebrated its centenary in 1998. Prior to the merger with Friedland Hart &amp; Partners Solomon Nicolson was responsible for producing many fine lawyers whose contributions to the legal profession and the firm itself deserve recognition. The list is too long to mention each by name but includes such distinguished lawyers as Peter Good, Roger Gillett, Dave Beyers, Gerrie van den Burg and Mark Rein.</p></div>
+      <div class="node"><span class="dot"></span><div class="yr">2009</div><h3>Friedland Hart Solomon &amp; Nicolson</h3><p>The well-known and longstanding practices of Friedland Hart &amp; Partners and Solomon Nicolson joined forces in 2009 under the name and style of Friedland Hart Solomon &amp; Nicolson.</p></div>
+      <div class="node"><span class="dot"></span><div class="yr">Today</div><h3>The firm today</h3><p>Other former Friedland Hart partners who are still with the firm are <span class="cursor-term" tabindex="0" data-desc="With the firm since 1982.">Gerhard Painter</span>, who has been with the firm since 1982, as well as <span class="cursor-term" tabindex="0" data-desc="With the firm since 1995.">Millie Shantall-Lurie</span> who has been with the firm since 1995. All of the present Directors, Associates, Professional Assistants and Consultants have formed an excellent and proud legal team. The reputation and integrity of Friedland Hart Solomon &amp; Nicolson is known and respected throughout South Africa. These principles are jealously guarded in our professional and personal dealings with clients, colleagues and other members of the legal profession.</p></div>
     </div>
     <a class="seclink reveal" href="./people.html">Meet the people behind it <span class="arrow">→</span></a>
   </div>
 </section>
 
 <footer>
+  <div class="wrap foot-block">
+    <p class="foot-name">Friedland Hart Solomon and Nicolson Inc</p>
+    <p class="foot-reg">Registration No. 2026/177513/21</p>
+    <address class="foot-addr">
+      <span>4-301 Monument Office Park, 79 Steenbok Ave, Monument Park, Pretoria</span>
+      <span>P.O. Box 645 &amp; 1003, Pretoria 0001 &middot; Docex 11, Pretoria</span>
+      <span>Tel <a href="tel:+27124240200">+27 12 424 0200</a></span>
+    </address>
+    <ul class="social" data-social aria-label="Social media"></ul>
+  </div>
   <div class="wrap frow">
-    <span>© 2026 Friedland Hart Solomon &amp; Nicolson</span>
-    <span>Monument Office Park, Pretoria · <a href="tel:+27124240200">012 424 0200</a></span>
-    <span>Attorneys · Notaries · Conveyancers</span>
+    <span>&copy; 2026 Friedland Hart Solomon and Nicolson Inc</span>
+    <span>Attorneys &middot; Notaries &middot; Conveyancers &middot; Administrators of Estates</span>
   </div>
 </footer>
 

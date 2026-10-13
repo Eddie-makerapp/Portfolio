@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="./redesign.css">
 <link rel="stylesheet" href="./variants.css">
 <link rel="stylesheet" href="./pages.css">
+<script src="./config.js"></script>
 </head>
 <body>
 <!-- Kinetic site loader -->
@@ -25,7 +26,8 @@
 
 <header id="hdr">
   <div class="wrap navrow">
-    <a class="mark" href="./index.html">
+    <!-- LOGO SLOT: set CONFIG.logo.src in config.js — the supplied logo replaces the "fhsn" wordmark on every page -->
+    <a class="mark" data-logo-slot href="./index.html">
       <span class="fhsn">fhsn</span>
       <span class="full">Friedland Hart Solomon &amp; Nicolson</span>
     </a>
@@ -72,29 +74,29 @@
 <section id="practice" class="pad">
   <div class="wrap">
     <p class="eyebrow reveal" data-fliptext>Professional services</p>
-    <h2 class="big reveal">Four departments.<br>One partnership.</h2>
-    <p class="lead reveal">Each department is led by a partner, not passed down a chain. You deal with the person who signs the work.</p>
+    <h2 class="big reveal">Four departments.<br>One firm.</h2>
+    <p class="lead reveal">Send an enquiry and it goes to the head of the relevant department.</p>
 
     <div class="cards">
       <a class="card reveal" href="./services.html#companies">
         <span class="glow"></span><span class="num">Dept 01</span><h3>Companies</h3>
         <p>MOI drafting and revision, special resolutions, shelf companies, CIPC lodgments, B-BBEE certificates and shareholders' agreements under the Companies Act 71 of 2008.</p>
-        <span class="more">Millie Shantall-Lurie <span class="arrow">→</span></span>
+        <span class="more">Enquire <span class="arrow">→</span></span>
       </a>
       <a class="card reveal" href="./services.html#litigation">
         <span class="glow"></span><span class="num">Dept 02</span><h3>Litigation</h3>
-        <p>One of the largest general and correspondent litigation practices in Pretoria. High Courts, Regional and District Magistrates' Courts.</p>
-        <span class="more">Grobler · Masindi · Painter <span class="arrow">→</span></span>
+        <p>We deal with all types of cases in the High Courts, Regional and District Magistrate’s Courts as well as other dispute resolution forums.</p>
+        <span class="more">Enquire <span class="arrow">→</span></span>
       </a>
       <a class="card reveal" href="./services.html#conveyancing">
         <span class="glow"></span><span class="num">Dept 03</span><h3>Conveyancing</h3>
         <p>Transfers and bonds, subdivisions, consolidations, servitudes, township openings and Sectional Title schemes. 175+ years of combined property experience.</p>
-        <span class="more">Miriam Jansen van Vuuren <span class="arrow">→</span></span>
+        <span class="more">Enquire <span class="arrow">→</span></span>
       </a>
       <a class="card reveal" href="./services.html#estates">
         <span class="glow"></span><span class="num">Dept 04</span><h3>Estates</h3>
         <p>Wills drawn and vetted, trusts drafted and registered, deceased and insolvent estates reported and wound up at the Master of the North Gauteng High Court.</p>
-        <span class="more">Ronel van Rooyen <span class="arrow">→</span></span>
+        <span class="more">Enquire <span class="arrow">→</span></span>
       </a>
     </div>
     <a class="seclink reveal" href="./services.html">All professional services <span class="arrow">→</span></a>
@@ -108,7 +110,7 @@
     <h2 class="reveal">Shelf companies, ordered online.</h2>
     <div class="price reveal">R600</div>
     <p class="fine reveal">Excluding VAT, disbursements and any corporate changes. Limited time offer.</p>
-    <a class="btn btn--trace reveal" href="mailto:millie@fhsn.co.za" style="border-color:#fff"><span class="fill"></span><span>Place your order</span><span class="arrow">→</span></a>
+    <a class="btn btn--trace reveal" href="./shelf-companies.html#order" style="border-color:#fff"><span class="fill"></span><span>Place your order</span><span class="arrow">→</span></a>
   </div>
 </section>
 
@@ -122,25 +124,34 @@
   </div>
 </section>
 
-<!-- NEWS PREVIEW -->
-<section id="news" class="pad">
+<!-- NEWS PREVIEW — hidden: no articles migrated yet. Remove "hidden" and add real articles to show it. -->
+<section id="news" class="pad" hidden>
   <div class="wrap">
     <p class="eyebrow reveal">News</p>
     <h2 class="big reveal">From the firm.</h2>
     <div class="posts">
-      <a class="post reveal" href="./news.html"><time>March 2017</time><h3>The consultation process during retrenchments</h3><p>What section 189 requires of an employer before a single letter goes out — and where most consultations go wrong.</p></a>
-      <a class="post reveal" href="./news.html"><time>January 2017</time><h3>Managing Partner commended for 19 years on the PAA Executive Committee</h3><p>Gerhard Painter applauded for service on the Executive Committee of the Pretoria Attorneys' Association.</p></a>
-      <a class="post reveal" href="./news.html"><time>March 2016</time><h3>My Business Expo 2016</h3><p>FHSN exhibited at the 8th annual My Business Expo hosted by the National Small Business Chamber.</p></a>
+      <div class="post is-placeholder reveal"><time>Date</time><h3>Article headline</h3><p>A short summary of the article will appear here.</p></div>
+      <div class="post is-placeholder reveal"><time>Date</time><h3>Article headline</h3><p>A short summary of the article will appear here.</p></div>
+      <div class="post is-placeholder reveal"><time>Date</time><h3>Article headline</h3><p>A short summary of the article will appear here.</p></div>
     </div>
     <a class="seclink reveal" href="./news.html">All news <span class="arrow">→</span></a>
   </div>
 </section>
 
 <footer>
+  <div class="wrap foot-block">
+    <p class="foot-name">Friedland Hart Solomon and Nicolson Inc</p>
+    <p class="foot-reg">Registration No. 2026/177513/21</p>
+    <address class="foot-addr">
+      <span>4-301 Monument Office Park, 79 Steenbok Ave, Monument Park, Pretoria</span>
+      <span>P.O. Box 645 &amp; 1003, Pretoria 0001 &middot; Docex 11, Pretoria</span>
+      <span>Tel <a href="tel:+27124240200">+27 12 424 0200</a></span>
+    </address>
+    <ul class="social" data-social aria-label="Social media"></ul>
+  </div>
   <div class="wrap frow">
-    <span>© 2026 Friedland Hart Solomon &amp; Nicolson</span>
-    <span>Monument Office Park, Pretoria · <a href="tel:+27124240200">012 424 0200</a></span>
-    <span>Attorneys · Notaries · Conveyancers</span>
+    <span>&copy; 2026 Friedland Hart Solomon and Nicolson Inc</span>
+    <span>Attorneys &middot; Notaries &middot; Conveyancers &middot; Administrators of Estates</span>
   </div>
 </footer>
 

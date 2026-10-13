@@ -103,7 +103,7 @@
     const hero = $('.hero'); if (!hero) return;
 
     /* info bar for the "anchored low" hero layout */
-    hero.appendChild(mk('div', 'hero-bar', '<div class="wrap"><span><b>Est.</b> 1898 · Pretoria</span><span>Attorneys · Notaries · Conveyancers · Administrators of Estates</span><span><b>Tel</b> <a href="tel:+27124240200">012 424 0200</a></span></div>'));
+    hero.appendChild(mk('div', 'hero-bar', '<div class="wrap"><span><b>Est.</b> 1898 · Pretoria</span><span>Attorneys · Notaries · Conveyancers · Administrators of Estates</span><span><b>Tel</b> <a href="tel:+27124240200">+27 12 424 0200</a></span></div>'));
 
     /* rotating-text ring for the "round badge" hero buttons */
     const cta2 = $('.hero .cta .btn + .btn');
@@ -366,9 +366,9 @@
       const mail = $('a[href^="mailto:"]', p); if (!mail) return;
       const email = mail.getAttribute('href').slice(7), name = $('h3', p).textContent.trim(), first = name.split(' ')[0];
       mail.after(mk('div', 'pbtns',
-        '<div class="pb-pair"><a class="pb-b solid" href="mailto:' + esc(email) + '">Email ' + esc(first) + ' <span aria-hidden="true">→</span></a><a class="pb-b" href="tel:+27124240200">Call 012 424 0200</a></div>' +
+        '<div class="pb-pair"><a class="pb-b solid" href="mailto:' + esc(email) + '">Email ' + esc(first) + ' <span aria-hidden="true">→</span></a><a class="pb-b" href="tel:+27124240200">Call +27 12 424 0200</a></div>' +
         '<div class="pb-copy"><button type="button" class="pb-b" data-email="' + esc(email) + '"><span class="lbl">Copy email</span> <code>' + esc(email) + '</code></button></div>' +
-        '<div class="pb-card"><span class="pc-ini" aria-hidden="true">' + esc(initials(name)) + '</span><div><strong>' + esc(name) + '</strong><a href="mailto:' + esc(email) + '">' + esc(email) + '</a><a href="tel:+27124240200">012 424 0200</a></div>' +
+        '<div class="pb-card"><span class="pc-ini" aria-hidden="true">' + esc(initials(name)) + '</span><div><strong>' + esc(name) + '</strong><a href="mailto:' + esc(email) + '">' + esc(email) + '</a><a href="tel:+27124240200">+27 12 424 0200</a></div>' +
         '<a class="pb-b solid" href="./contact.html">Book a consultation →</a></div>'));
     });
     document.addEventListener('click', e => {
@@ -387,11 +387,12 @@
     const dw = mk('div', 'dept-wrap'); svcs[0].before(dw); svcs.forEach(s => dw.appendChild(s));
     const D = svcs.map(s => ({ el: s, id: s.id, num: $('.num', s).textContent.trim(), name: $('h2', s).textContent.trim() }));
     const short = d => d.name.replace('Administration of ', '');
+    /* every enquiry goes to the head of that department (addresses in config.js) */
     const DC = {
-      companies: { who: 'Millie Shantall-Lurie', note: 'Companies department', btn: 'Email Millie Shantall-Lurie', href: 'mailto:millie@fhsn.co.za' },
-      litigation: { who: 'Regardt Grobler', note: 'With Gerhard Painter & Gerrie Stolp consulting', btn: 'Speak to the litigation team', href: './contact.html' },
-      conveyancing: { who: 'Miriam Jansen van Vuuren', note: 'Head of department · with Yvette Erasmus', btn: 'Contact Miriam Jansen van Vuuren', href: './contact.html' },
-      estates: { who: 'Ronel van Rooyen', note: 'Estates department', btn: 'Contact Ronel van Rooyen', href: './contact.html' }
+      companies: { who: 'Companies department', note: 'Enquiries go to the head of the department', btn: 'Enquire — Companies', href: './contact.html?dept=corporate' },
+      litigation: { who: 'Litigation department', note: 'Enquiries go to the head of the department', btn: 'Enquire — Litigation', href: './contact.html?dept=litigation' },
+      conveyancing: { who: 'Conveyancing department', note: 'Enquiries go to the head of the department', btn: 'Enquire — Conveyancing', href: './contact.html?dept=property' },
+      estates: { who: 'Estates department', note: 'Enquiries go to the head of the department', btn: 'Enquire — Estates', href: './contact.html?dept=estates' }
     };
 
     /* background animation */
@@ -519,7 +520,9 @@
     if (!arch) return;
     const posts = $$('.post', arch);
     if (feature && !feature.id) feature.id = 'news-feature';
-    const titles = [feature ? $('h2', feature).textContent.trim() : ''].concat(posts.map(p => $('h3', p).textContent.trim())).filter(Boolean);
+    /* while the cards are placeholders there is nothing to tease, scroll, filter or announce */
+    const PH = !feature || feature.classList.contains('is-placeholder');
+    const titles = PH ? ['From the firm'] : [feature ? $('h2', feature).textContent.trim() : ''].concat(posts.map(p => $('h3', p).textContent.trim())).filter(Boolean);
 
     /* background animation */
     const wave = $('#wave-grid'), scrim = $('.wave-scrim');
@@ -543,16 +546,16 @@
     const hw = $('.wrap', hero);
     const today = new Date().toLocaleDateString('en-ZA', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
     hw.prepend(mk('div', 'masthead-bar', '<span>Pretoria</span><span>' + esc(today) + '</span><span>Est. 1898</span>'));
-    if (feature) {
+    if (feature && !PH) {
       const teaser = mk('a', 'hero-teaser', '<time>' + esc($('time', feature).textContent) + '</time><strong>' + esc($('h2', feature).textContent) + '</strong><span>Read the story →</span>', { href: '#' + feature.id });
       teaser.addEventListener('click', e => { e.preventDefault(); scrollToEl(feature); });
       hw.appendChild(teaser);
     }
 
     /* headline marquee / latest-story pop-up */
-    hero.after(deco('div', 'news-ticker', '<span class="nt-badge">Latest</span><div class="nt-track"><div>' + (titles.map(esc).join(' <i>◆</i> ') + ' <i>◆</i> ').repeat(2) + '</div></div>'));
+    if (!PH) hero.after(deco('div', 'news-ticker', '<span class="nt-badge">Latest</span><div class="nt-track"><div>' + (titles.map(esc).join(' <i>◆</i> ') + ' <i>◆</i> ').repeat(2) + '</div></div>'));
     const flash = mk('aside', 'news-flash', '<button type="button" class="nf-x" aria-label="Dismiss">×</button><small>Latest</small><strong>' + esc(titles[0]) + '</strong><a href="#' + (feature ? feature.id : '') + '">Read the story →</a>', { 'aria-label': 'Latest story' });
-    body.appendChild(flash);
+    if (!PH) body.appendChild(flash);
     $('a', flash).addEventListener('click', e => { e.preventDefault(); flash.classList.remove('show'); if (feature) scrollToEl(feature); });
     $('.nf-x', flash).addEventListener('click', () => flash.classList.remove('show'));
     let ft;
@@ -560,7 +563,7 @@
 
     /* archive carousel + read buttons */
     carousel(arch);
-    posts.forEach(p => p.insertAdjacentHTML('beforeend', '<span class="read">' + (/contact/.test(p.getAttribute('href')) ? 'Get in touch' : 'Read story') + ' <span class="arrow">→</span></span>'));
+    if (!PH) posts.forEach(p => p.insertAdjacentHTML('beforeend', '<span class="read">' + (/contact/.test(p.getAttribute('href')) ? 'Get in touch' : 'Read story') + ' <span class="arrow">→</span></span>'));
 
     /* story filter */
     posts.forEach(p => {
@@ -575,7 +578,7 @@
       '<div class="nf-g nf-topics" role="group" aria-label="Filter by topic"><button type="button" class="on" data-k="topic" data-v="">All</button>' + TOPICS.map(t => '<button type="button" data-k="topic" data-v="' + t[0] + '">' + t[1] + '</button>').join('') + '</div>' +
       '<label class="nf-g nf-search"><input type="search" placeholder="Search stories…" aria-label="Search stories"></label>' +
       '<p class="nf-none" hidden>No stories match.</p>');
-    arch.before(nf);
+    if (!PH) arch.before(nf);
     const fs = { year: '', topic: '', q: '' };
     function applyNews() {
       const m = V('newsfilter'); let any = false;
@@ -633,16 +636,16 @@
       f.removeAttribute('loading'); f.setAttribute('tabindex', '-1'); f.title = 'Map background';
       hmap.appendChild(f);
     });
-    hw.appendChild(mk('div', 'hero-contact', '<a class="hc-phone" href="tel:+27124240200"><small>Call the switchboard</small>012 424 0200</a><a class="hc-mail" href="mailto:millie@fhsn.co.za">millie@fhsn.co.za</a><span class="hc-addr">4-301 Monument Office Park · Monument Park · Pretoria</span>'));
+    hw.appendChild(mk('div', 'hero-contact', '<a class="hc-phone" href="tel:+27124240200"><small>Call the switchboard</small>+27 12 424 0200</a><span class="hc-addr">4-301 Monument Office Park · Monument Park · Pretoria</span>'));
     hero.appendChild(deco('div', 'hero-stamp', ringText('MONUMENT OFFICE PARK · PRETORIA · EST. 1898 · ') + '<b>fhsn</b>'));
 
     /* section backdrop: location pulse rings behind the map */
     if (mapWrap) mapWrap.appendChild(deco('div', 'radar', '<i></i><i></i><i></i>'));
 
     /* department picker (synced with the real <select>) */
-    const DEP = [['Companies', 'Millie Shantall-Lurie'], ['Litigation', 'Grobler · Masindi · Painter'], ['Conveyancing', 'Miriam Jansen van Vuuren'], ['Administration of Estates', 'Ronel van Rooyen'], ['Other', 'General enquiry']];
+    const DEP = [['corporate', 'Companies'], ['litigation', 'Litigation'], ['property', 'Conveyancing'], ['estates', 'Administration of Estates'], ['notarial', 'Notarial']];
     if (sel) {
-      const dp = mk('div', 'dept-pick', DEP.map(d => '<button type="button" data-v="' + esc(d[0]) + '" aria-pressed="false"><strong>' + esc(d[0]) + '</strong><small>' + esc(d[1]) + '</small></button>').join(''),
+      const dp = mk('div', 'dept-pick', DEP.map(d => '<button type="button" data-v="' + esc(d[0]) + '" aria-pressed="false"><strong>' + esc(d[1]) + '</strong></button>').join(''),
         { role: 'group', 'aria-label': 'Choose a department' });
       sel.after(dp);
       const sync = () => $$('button', dp).forEach(b => { const on = b.dataset.v === sel.value; b.classList.toggle('on', on); b.setAttribute('aria-pressed', on); });
@@ -728,10 +731,10 @@
 
     /* quick call: floating phone / sticky bar / header number */
     const PHONE = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.4c-1.2 0-2.4-.2-3.5-.6-.3-.1-.7 0-1 .2l-1.6 2c-2.8-1.4-5.5-3.9-6.9-6.8l2-1.7c.3-.3.3-.7.2-1-.4-1.1-.6-2.3-.6-3.5 0-.5-.4-1-1-1H4.2C3.6 3 3 3.2 3 4c0 9.3 7.7 17 17 17 .7 0 1-.6 1-1.2v-3.4c0-.6-.5-1-1-1z"/></svg>';
-    body.appendChild(mk('a', 'call-fab', PHONE, { href: 'tel:+27124240200', 'aria-label': 'Call 012 424 0200' }));
-    body.appendChild(mk('div', 'call-bar', '<span>Speak to an attorney — <b>012 424 0200</b></span><a class="cb-call" href="tel:+27124240200">Call now</a><a href="mailto:millie@fhsn.co.za">Email</a>'));
+    body.appendChild(mk('a', 'call-fab', PHONE, { href: 'tel:+27124240200', 'aria-label': 'Call +27 12 424 0200' }));
+    body.appendChild(mk('div', 'call-bar', '<span>Speak to an attorney — <b>+27 12 424 0200</b></span><a class="cb-call" href="tel:+27124240200">Call now</a>'));
     const navrow = $('#hdr .navrow');
-    if (navrow) navrow.insertBefore(mk('a', 'hdr-call', '☎ 012 424 0200', { href: 'tel:+27124240200' }), $('#burger'));
+    if (navrow) navrow.insertBefore(mk('a', 'hdr-call', '☎ +27 12 424 0200', { href: 'tel:+27124240200' }), $('#burger'));
     addEventListener('scroll', () => body.classList.toggle('scrolled', scrollY > 280), { passive: true });
 
     /* directions — wording from the current fhsn.co.za contact page */

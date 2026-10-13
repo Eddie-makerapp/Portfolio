@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="./redesign.css">
 <link rel="stylesheet" href="./variants.css">
 <link rel="stylesheet" href="./pages.css">
+<script src="./config.js"></script>
 </head>
 <body class="wave-page">
 <!-- Wave grid background (three.js) -->
@@ -21,7 +22,8 @@
 
 <header id="hdr">
   <div class="wrap navrow">
-    <a class="mark" href="./index.html"><span class="fhsn">fhsn</span><span class="full">Friedland Hart Solomon &amp; Nicolson</span></a>
+    <!-- LOGO SLOT: set CONFIG.logo.src in config.js — the supplied logo replaces the "fhsn" wordmark on every page -->
+    <a class="mark" data-logo-slot href="./index.html"><span class="fhsn">fhsn</span><span class="full">Friedland Hart Solomon &amp; Nicolson</span></a>
     <nav id="nav"><ul>
       <li><a href="./index.html">Home</a></li>
       <li><a href="./history.html">History</a></li>
@@ -38,41 +40,50 @@
   <div class="wrap">
     <p class="eyebrow">News</p>
     <h1>From the <em>firm.</em></h1>
-    <p class="lead">Updates, milestones and practical legal commentary.</p>
+    <p class="lead">News and updates from the firm.</p>
   </div>
 </section>
 
 <section class="pad">
   <div class="wrap">
-    <a class="feature reveal" href="mailto:millie@fhsn.co.za">
+    <p class="ph-note reveal"><span class="cv-tag">Placeholder</span> News articles will be published here. This is the page structure only &mdash; no articles have been migrated yet.</p>
+    <div class="feature is-placeholder reveal">
       <div class="media">fhsn</div>
       <div class="body">
-        <time>March 2017 · Featured</time>
-        <h2>Managing Partner commended for 19 years of service</h2>
-        <p class="lead" style="font-size:16px">Gerhard Painter was applauded for serving on the Executive Committee of the Pretoria Attorneys' Association — nineteen years of service to the profession.</p>
-        <span class="seclink">Read the article <span class="arrow">→</span></span>
+        <time>Date</time>
+        <h2>Featured article headline</h2>
+        <p class="lead" style="font-size:16px">A short summary of the featured article will appear here.</p>
       </div>
-    </a>
+    </div>
   </div>
 </section>
 
 <section id="news" class="pad" style="padding-top:0">
   <div class="wrap">
     <p class="eyebrow reveal">Archive</p>
-    <h2 class="big reveal">Earlier stories.</h2>
+    <h2 class="big reveal">Earlier articles.</h2>
     <div class="posts">
-      <a class="post reveal" href="mailto:millie@fhsn.co.za"><time>January 2017</time><h3>My Business Expo 2016</h3><p>FHSN exhibited at the 8th annual My Business Expo hosted by the National Small Business Chamber.</p></a>
-      <a class="post reveal" href="mailto:millie@fhsn.co.za"><time>March 2016</time><h3>The consultation process during retrenchments</h3><p>What section 189 requires of an employer before a single letter goes out — and where most consultations go wrong.</p></a>
-      <a class="post reveal" href="./contact.html"><time>Enquiries</time><h3>Media &amp; press</h3><p>For comment or media enquiries, contact our offices — we're glad to assist.</p></a>
+      <div class="post is-placeholder reveal"><time>Date</time><h3>Article headline</h3><p>A short summary of the article will appear here.</p></div>
+      <div class="post is-placeholder reveal"><time>Date</time><h3>Article headline</h3><p>A short summary of the article will appear here.</p></div>
+      <div class="post is-placeholder reveal"><time>Date</time><h3>Article headline</h3><p>A short summary of the article will appear here.</p></div>
     </div>
   </div>
 </section>
 
 <footer>
+  <div class="wrap foot-block">
+    <p class="foot-name">Friedland Hart Solomon and Nicolson Inc</p>
+    <p class="foot-reg">Registration No. 2026/177513/21</p>
+    <address class="foot-addr">
+      <span>4-301 Monument Office Park, 79 Steenbok Ave, Monument Park, Pretoria</span>
+      <span>P.O. Box 645 &amp; 1003, Pretoria 0001 &middot; Docex 11, Pretoria</span>
+      <span>Tel <a href="tel:+27124240200">+27 12 424 0200</a></span>
+    </address>
+    <ul class="social" data-social aria-label="Social media"></ul>
+  </div>
   <div class="wrap frow">
-    <span>© 2026 Friedland Hart Solomon &amp; Nicolson</span>
-    <span>Monument Office Park, Pretoria · <a href="tel:+27124240200">012 424 0200</a></span>
-    <span>Attorneys · Notaries · Conveyancers</span>
+    <span>&copy; 2026 Friedland Hart Solomon and Nicolson Inc</span>
+    <span>Attorneys &middot; Notaries &middot; Conveyancers &middot; Administrators of Estates</span>
   </div>
 </footer>
 
